@@ -2,4 +2,41 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!--主界面分类文字-->
+    <dimen name="mainClassifyTvMarginTop">20px</dimen>
+    <dimen name="mainClassifyTvMarginLeft">30px</dimen>
+    <!--主界面分类文字的大小-->
+    <dimen name="mainClassifyTvSize">30px</dimen>
+
+    <!--主界面分类文字距右面小箭头的距离-->
+    <dimen name="mainClassifyIvMarginLeft">9px</dimen>
+    <!--主界面分类标题下的横线-->
+    <dimen name="mainClassifyLineMarginTop">14px</dimen>
+    <!--主界面分類下的提示 距離上方橫線的距離-->
+    <dimen name="mainClassifyNoticeMarginTop">26px</dimen>
+    <!--主界面分類下的提示的字體大小-->
+    <dimen name="mainClassifyNoticeTvSize">24px</dimen>
+    <!--主界面下方RecyclerView距離上方的距離-->
+    <dimen name="mainRvMarginTop">94px</dimen>
+    <!--主界面下方RecyclerView距離左邊的距離-->
+    <dimen name="mainRvMarginLeft">22px</dimen>
+
+    <!--購物車中間房子圖片距離上方的距離-->
+    <dimen name="cartIvMarginTop">350px</dimen>
+    <!--購物車中無商品的文字距離上放圖片的距離-->
+    <dimen name="cartTvMarginTop">30px</dimen>
+    <dimen name="horizontalItemIvHeight">595px</dimen>
+    <dimen name="itemHorizontalGoodsNameMarginTop">50px</dimen>
+    <dimen name="itemHorizontalTvMargin">32px</dimen>
+    <dimen name="itemHorizontalGoodsNameSize">30px</dimen>
+    <dimen name="itemHorizontalBlackLineMarginTop">30px</dimen>
+    <dimen name="itemHorizontalBlackLineWidth">474px</dimen>
+    <dimen name="itemHorizontalProductAreaMarginTop">16px</dimen>
+    <dimen name="itemHorizontalModelMarginTop">16px</dimen>
+    <dimen name="itemHorizontalProductAreaSize">24px</dimen>
+    <dimen name="itemHorizontalModelTvSize">30px</dimen>
+    
+    
+    
 </resources>
