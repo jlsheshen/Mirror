@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.base.BaseActivity;
-import com.mirroreye.mirror.ui.MainActivity;
+import com.mirroreye.mirror.ui.main.MainActivity;
 
 /**
  * Created by 秦谦谦 on 16/6/13 11:26.

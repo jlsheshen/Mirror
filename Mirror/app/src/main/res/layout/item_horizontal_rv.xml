@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="540px"
+    android:layout_height="833px"
+    android:layout_marginLeft="@dimen/mainRvMarginLeft"
+    android:background="@drawable/shape_rv_border">
+
+    <ImageView
+        android:id="@+id/item_horizontal_iv"
+        android:layout_width="540px"
+        android:src="@mipmap/text"
+        android:scaleType="fitXY"
+        android:layout_height="833px" />
+
+    <LinearLayout
+        android:layout_width="540px"
+        android:layout_alignBottom="@id/item_horizontal_iv"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/mainTextViewColor">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/itemHorizontalGoodsNameMarginTop"
+            >
+
+            <TextView
+                android:id="@+id/item_horizontal_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lioh"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="@dimen/itemHorizontalGoodsNameSize"
+                android:textColor="@color/itemRecyclerViewTvColor"
+                android:layout_marginLeft="@dimen/itemHorizontalTvMargin"
+                />
+            <TextView
+                android:id="@+id/item_horizontal_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/itemHorizontalTvMargin"
+                android:textColor="@color/itemRecyclerViewTvColor"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_horizontal_product_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="@dimen/itemHorizontalProductAreaSize"
+            android:textColor="@color/itemRecyclerViewTvColor"
+            android:layout_marginTop="@dimen/itemHorizontalProductAreaMarginTop"
+            android:layout_marginLeft="@dimen/itemHorizontalTvMargin"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/itemHorizontalBlackLineWidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/itemHorizontalBlackLineMarginTop"
+            android:src="@mipmap/black_line"/>
+
+        <TextView
+            android:id="@+id/item_horizontal_model"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:layout_marginLeft="@dimen/itemHorizontalTvMargin"
+            android:textColor="@color/itemRecyclerViewTvColor"
+            android:textSize="@dimen/itemHorizontalModelTvSize"
+            android:layout_marginTop="@dimen/itemHorizontalModelMarginTop"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Mirror</string>
+
+    <!--主界面分类文字-->
+    <string name="mainClassifyTvAll">瀏覽葰絠忿類</string>
+    <string name="mainClassifyTvGoggles">瀏覽平光鏡</string>
+    <string name="mainClassifyTvSunGlasses">瀏覽太陽鏡</string>
+    <string name="mainClassifyTvShare">專題分享</string>
+    <string name="mainClassifyTvCart">我的購物車</string>
+    <!--购物车提示文字-->
+    <string name="cartNull">您的購物車里沒有商品</string>
+
+
+    <!--主界面分类横线下的提示-->
+    <string name="belowMainClassifyLineTv">顯示排序為 最新推薦</string>
+    <!--主界面登錄-->
+    <string name="login">登錄</string>
 </resources>
