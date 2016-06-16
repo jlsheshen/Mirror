@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.main.MainActivity"/>
+        <activity android:name=".ui.story_detail.StoryDetailActivity"/>
         <meta-data
             android:name="design_width"
             android:value="720" />

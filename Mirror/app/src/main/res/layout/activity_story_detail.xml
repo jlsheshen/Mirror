@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/story_detail_background_iv"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/welcome_image"
+        />
+    <com.mirroreye.mirror.base.view.VerticalViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/story_detail_content_vvp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/shareMargin"
+        android:layout_marginTop="@dimen/MarginTopGoodsNameWhiteCancel"
+        android:src="@mipmap/white_cancel_image"
+        android:id="@+id/story_detail_cancel_iv"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/shareMargin"
+        android:layout_marginBottom="@dimen/shareMargin"
+        android:src="@mipmap/share_image"
+        android:id="@+id/story_detail_share_iv"
+
+        />
 
 
 
-</FrameLayout>
+
+
+</RelativeLayout>
