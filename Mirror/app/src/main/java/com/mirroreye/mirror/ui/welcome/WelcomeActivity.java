@@ -39,6 +39,7 @@ public class WelcomeActivity extends BaseActivity {
             //5秒之后进行页面的跳转
                 Intent intent=new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         }.start();
     }

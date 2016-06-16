@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Mirror</string>
+    <string name="BrowseAll">瀏覽所有分類</string>
+    <string name="browse_the_flat_glasses">瀏覽平光眼鏡</string>
+    <string name="Viewing_the_sun_glasses">瀏覽太陽眼鏡</string>
+    <string name="Special_to_share">專題分享</string>
+    <string name="ShoppingCart">我的購物車</string>
+    <string name="ReturnToTheHomePage">返回首頁</string>
+    <string name="quit">退出</string>
 </resources>
