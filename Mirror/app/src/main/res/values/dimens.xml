@@ -2,6 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+<<<<<<< HEAD
     
     <!--主界面分类文字-->
     <dimen name="mainClassifyTvMarginTop">20px</dimen>
@@ -66,4 +67,14 @@
 >>>>>>> feature/故事详情页面
 
 
+=======
+
+    <!--ppw的-->
+
+    <dimen name="ppw_marginLeft">48px</dimen>
+    <dimen name="ppw_tv_marginTop">78px</dimen>
+    <dimen name="ppw_tv_textSize">28px</dimen>
+    <dimen name="ppw_image_marginTop">22px</dimen>
+    <dimen name="ppw_linear_marginTop">0px</dimen>
+>>>>>>> feature/ppw_抽屉
 </resources>

@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+<<<<<<< HEAD
     <!--主界面的背景-->
     <color name="mianBackgroundEndColor">#1a263e</color>
     <color name="mianBackgroundStartColor">#1e4da1</color>
@@ -21,4 +22,13 @@
     <color name="loginRegisterTvBackground">#d85958</color>
 
 
+=======
+    <!--主页&抽屉背景-渐变-->
+    <color name="color_main_backcolor_top">#1a263e</color>
+    <color name="color_main_backcolor_bottom">#2b4682</color>
+    
+    <!--主页&抽屉字体颜色设置-白色-->
+    <color name="color_main_text_default">#fff</color>
+    <color name="color_main_text_alpha">#25ffffff</color>
+>>>>>>> feature/ppw_抽屉
 </resources>
