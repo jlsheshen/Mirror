@@ -8,7 +8,7 @@
         android:color="@android:color/black"
         android:dashWidth="1px" />
 
-    <!-- 3.填充 -->
+    <!-- 填充 -->
     <solid android:color="@android:color/white" />
     <!-- 填充的颜色 十六进制-->
 
