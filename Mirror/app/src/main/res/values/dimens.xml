@@ -36,7 +36,24 @@
     <dimen name="itemHorizontalModelMarginTop">16px</dimen>
     <dimen name="itemHorizontalProductAreaSize">24px</dimen>
     <dimen name="itemHorizontalModelTvSize">30px</dimen>
-    
-    
-    
+    <dimen name="loginTitleMarginTop">30px</dimen>
+    <dimen name="loginTitleTvSize">34px</dimen>
+    <dimen name="LoginTitleTvSize">34px</dimen>
+    <dimen name="LoginTitlemarginLeft">46px</dimen>
+    <dimen name="LoginLineMarginTop">20px</dimen>
+    <dimen name="LoginMarginLeft">30px</dimen>
+    <dimen name="LoginPhoneTvMarginTop">40px</dimen>
+    <dimen name="LoginTvSize">24px</dimen>
+    <dimen name="loginPhoneEtMarginTop">20px</dimen>
+    <dimen name="loginEtHeight">80px</dimen>
+    <dimen name="loginPswTvMarginTop">30px</dimen>
+    <dimen name="loginBtnMarginTop">40px</dimen>
+    <dimen name="loginBtnTvSize">30px</dimen>
+    <dimen name="loginRegisterMarginLogin">30px</dimen>
+    <dimen name="loginForgetPswTvSize">26px</dimen>
+    <dimen name="LoginIconPadding">50px</dimen>
+    <dimen name="registerSendCodeTvSize">26px</dimen>
+    <dimen name="registerSendCodeWidth">200px</dimen>
+
+
 </resources>

@@ -19,6 +19,13 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
     private List<String> data;
     private Context context;
 
+    //接口对象
+    public MyOnItemClickListener myOnItemClickListener;
+    //设置接口对象的set方法
+    public void setMyOnItemClickListener(MyOnItemClickListener myOnItemClickListener) {
+        this.myOnItemClickListener = myOnItemClickListener;
+    }
+
     public HorizontalRecyclerViewAdapter(Context context) {
         this.context = context;
     }
@@ -40,8 +47,20 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
     //RecyclerView里每一个itemView里的组件显示什么数据,都在此方法中设置
     //为行布局设置组件
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
         holder.model.setText(data.get(position));
+        //如果接口对象不为空,则开始对itemView设置监听
+        if (myOnItemClickListener != null){
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //当itemView被点击时候,就会执行里面的代码
+                    //getLayoutPosition是获得当前是第几条数据
+                    int pos = holder.getLayoutPosition();
+                    myOnItemClickListener.onItemClick(pos);
+                }
+            });
+        }
     }
 
     @Override
@@ -65,4 +84,12 @@ public class HorizontalRecyclerViewAdapter extends RecyclerView.Adapter<Horizont
              model = (TextView) itemView.findViewById(R.id.item_horizontal_model);
          }
      }
+
+    /**
+     * ItemClick的回调接口
+     */
+    public interface MyOnItemClickListener{
+        void onItemClick(int pos);
+    }
+
 }

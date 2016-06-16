@@ -12,6 +12,13 @@
     <color name="mainTextViewColor">#ffffff</color>
     <!--横向RecyclerView中的 字体颜色-->
     <color name="itemRecyclerViewTvColor">#000000</color>
+    <!--登录与注册界面的背景色-->
+    <color name="backgroundBothLoginAndroidRegister">#f1f1f1</color>
+    <!--登录与注册界面的输入框的描边-->
+    <color name="loginEtBorder">#dfdfdf</color>
+
+    <!--登录和注册界面的可点击的TextView的背景-->
+    <color name="loginRegisterTvBackground">#d85958</color>
 
 
 </resources>

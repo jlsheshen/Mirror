@@ -1,21 +1,25 @@
 package com.mirroreye.mirror.ui.main;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.adapter.MainViewPagerAdapter;
 import com.mirroreye.mirror.base.BaseActivity;
 import com.mirroreye.mirror.base.view.VerticalViewPager;
+import com.mirroreye.mirror.ui.login.LoginActivty;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private VerticalViewPager verticalViewPager;
     private MainViewPagerAdapter mainViewPagerAdapter;
     private List<Fragment> fragmentList;
+
+    private TextView login;
 
 
     @Override
@@ -26,6 +30,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         verticalViewPager = bindView(R.id.main_vertical_vp);
+        login = bindView(R.id.login);
     }
 
     @Override
@@ -35,14 +40,24 @@ public class MainActivity extends BaseActivity {
         mainViewPagerAdapter.setFragments(fragmentList);
         verticalViewPager.setAdapter(mainViewPagerAdapter);
 
+        login.setOnClickListener(this);
     }
 
     private void initFragment() {
         fragmentList = new ArrayList<>();
-        fragmentList.add(new AllFragment());
-        fragmentList.add(new GogglesFragment());
-        fragmentList.add(new SunglassesFragment());
-        fragmentList.add(new ShareFragment());
+        for (int i = 0 ; i < 4; i++){
+            fragmentList.add(new AllFragment());
+        }
         fragmentList.add(new CartFragment());
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.login:
+                Intent intent  = new Intent(this, LoginActivty.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

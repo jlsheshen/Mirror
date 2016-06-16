@@ -15,4 +15,14 @@
     <string name="belowMainClassifyLineTv">顯示排序為 最新推薦</string>
     <!--主界面登錄-->
     <string name="login">登錄</string>
+    <string name="LoginTitleTv">賬號登錄</string>
+    <string name="LoginPhoneNumberTv">手機號</string>
+    <string name="loginPswTv">密碼</string>
+    <string name="loginRegisterTv">創建賬號</string>
+    <string name="loginLoginTv">登錄</string>
+    <string name="loginForgetPswTv">忘記密碼?</string>
+    <string name="loginUseOtherNumberTv">使用社交賬號</string>
+    <string name="registerTitleTv">創建賬號</string>
+    <string name="registerSetPswTv">設置密碼</string>
+    <string name="registerSendCodeTv">發送驗證碼</string>
 </resources>
