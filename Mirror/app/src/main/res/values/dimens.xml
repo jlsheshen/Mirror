@@ -27,7 +27,7 @@
     <!--購物車中無商品的文字距離上放圖片的距離-->
     <dimen name="cartTvMarginTop">30px</dimen>
     <dimen name="horizontalItemIvHeight">595px</dimen>
-    <dimen name="itemHorizontalGoodsNameMarginTop">50px</dimen>
+    <dimen name="MarginTopGoodsNameWhiteCancel">50px</dimen>
     <dimen name="itemHorizontalTvMargin">32px</dimen>
     <dimen name="itemHorizontalGoodsNameSize">30px</dimen>
     <dimen name="itemHorizontalBlackLineMarginTop">30px</dimen>
@@ -36,6 +36,7 @@
     <dimen name="itemHorizontalModelMarginTop">16px</dimen>
     <dimen name="itemHorizontalProductAreaSize">24px</dimen>
     <dimen name="itemHorizontalModelTvSize">30px</dimen>
+<<<<<<< HEAD
     <dimen name="loginTitleMarginTop">30px</dimen>
     <dimen name="loginTitleTvSize">34px</dimen>
     <dimen name="LoginTitleTvSize">34px</dimen>
@@ -54,6 +55,15 @@
     <dimen name="LoginIconPadding">50px</dimen>
     <dimen name="registerSendCodeTvSize">26px</dimen>
     <dimen name="registerSendCodeWidth">200px</dimen>
+=======
+    <dimen name="shareMargin">40px</dimen>
+    <dimen name="storyContentTextBackgroundWidth">640px</dimen>
+    <dimen name="storyTitleMargin">65px</dimen>
+    <dimen name="smallTitleSize">22px</dimen>
+    <dimen name="storyBottomMargin">135px</dimen>
+    <dimen name="middleTitleSize">34px</dimen>
+    <dimen name="smallContentSize">20px</dimen>
+>>>>>>> feature/故事详情页面
 
 
 </resources>
