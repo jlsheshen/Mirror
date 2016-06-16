@@ -9,7 +9,7 @@ import com.mirroreye.mirror.base.BaseActivity;
 public class GoodsDetails extends BaseActivity {
     @Override
     public int setLayout() {
-        return R.layout.activity_goods_detail;
+        return R.layout.activity_good_detail;
     }
 
     @Override

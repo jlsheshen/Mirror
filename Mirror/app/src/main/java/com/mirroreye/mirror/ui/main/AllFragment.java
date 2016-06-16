@@ -4,11 +4,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.adapter.HorizontalRecyclerViewAdapter;
+import com.mirroreye.mirror.adapter.PPWAdapter;
 import com.mirroreye.mirror.base.BaseFragment;
 import com.mirroreye.mirror.ui.goods.GoodsDetails;
 
@@ -21,10 +30,19 @@ import java.util.List;
  */
 public class AllFragment extends BaseFragment implements HorizontalRecyclerViewAdapter.MyOnItemClickListener {
 
+
+    private TextView textView;
+    private PopupWindow popupWindow;
+    private View view;
+    private ListView ppwListView;
+    private PPWAdapter ppwAdapter;
+    private List<String> data;
+
     private RecyclerView recyclerView;
     private HorizontalRecyclerViewAdapter horizontalRecyclerViewAdapter;
     private TextView title;
     private String[] titleList = {"瀏覽全部分類","瀏覽平光鏡","瀏覽太陽鏡","專題分享"};
+    private LinearLayout fragmentTitle;
 
     private static final String TAG_POSITION = "fragmentPositionTag";
     int position ;
@@ -38,6 +56,7 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
     protected void initView(View view) {
         recyclerView= bindView(R.id.all_fragment_rv);
         title = bindView(R.id.all_fragment_title);
+        fragmentTitle = bindView(R.id.all_fragment_classify);
 
         Bundle arg = getArguments();
         position  = arg.getInt(TAG_POSITION);
@@ -56,7 +75,16 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
         for (int i = 0 ;i< 10 ;i++){
             data.add(i+"巴拉拉能量~~~~");
         }
-        horizontalRecyclerViewAdapter.setData(data);
+
+        fragmentTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToppp();
+            }
+        });
+
+
+                horizontalRecyclerViewAdapter.setData(data);
         recyclerView.setAdapter(horizontalRecyclerViewAdapter);
 
         horizontalRecyclerViewAdapter.setMyOnItemClickListener(this);
@@ -90,4 +118,41 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
         Intent intent = new Intent(getContext(), GoodsDetails.class);
         startActivity(intent);
     }
+
+private void goToppp(){
+
+    //设置抽屉
+    popupWindow = new PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+    view = LayoutInflater.from(getContext()).inflate(R.layout.ppw_info, null);
+    //初始化抽屉的组件
+    ppwListView = (ListView) view.findViewById(R.id.ppw_list);
+
+    popupWindow.setContentView(view);
+    //点击事件弹出抽屉
+
+            //抽屉的弹出
+            popupWindow.showAtLocation(view, Gravity.TOP, 0, 0);
+            data = new ArrayList<>();
+            data.add("瀏覽所有分類");
+            data.add("瀏覽平光眼鏡");
+            data.add("瀏覽太陽眼鏡");
+            data.add("專題分享");
+            data.add("我的購物車");
+            data.add("返回首頁");
+            data.add("退出");
+            ppwAdapter = new PPWAdapter(getContext());
+            ppwAdapter.setData(data);
+            ppwListView.setAdapter(ppwAdapter);
+
+
+    if (popupWindow.isShowing()) {
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("MainActivity", "点击view");
+                popupWindow.dismiss();
+            }
+        });
+    }
+}
 }
