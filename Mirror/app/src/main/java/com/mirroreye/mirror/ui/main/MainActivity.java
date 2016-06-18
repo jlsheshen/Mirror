@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     private List<Fragment> fragmentList;
     private PPWAdapter ppwAdapter;
     private TextView login;
-    
+
 //    极光
 public static boolean isForeground = false;
 
