@@ -10,10 +10,12 @@
     android:maxHeight="5dp"
     android:minHeight="5dp"
     android:progress="0"
-    android:progressDrawable="@drawable/video_seekbar"
     android:secondaryProgress="0" >
 
 </SeekBar>
+
+
+
 
 <!--  android:layout_alignParentEnd="true"
     android:layout_alignParentStart="true" -->

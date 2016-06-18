@@ -20,6 +20,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="@dimen/mainRvMarginLeft"
             android:textColor="@color/mainTextViewColor"
+            android:id="@+id/log"
             />
         <TextView
             android:id="@+id/login"

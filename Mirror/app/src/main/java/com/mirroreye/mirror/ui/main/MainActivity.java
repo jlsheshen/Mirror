@@ -27,6 +27,7 @@ import com.mirroreye.mirror.base.BaseActivity;
 import com.mirroreye.mirror.base.view.VerticalViewPager;
 import com.mirroreye.mirror.interfaces.PPWToFragment;
 import com.mirroreye.mirror.ui.login.LoginActivty;
+import com.mirroreye.mirror.ui.show.WearShowActivity;
 import com.mirroreye.mirror.utils.ExampleUtil;
 import com.mirroreye.mirror.utils.Share;
 
@@ -44,7 +45,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     private MainViewPagerAdapter mainViewPagerAdapter;
     private List<Fragment> fragmentList;
     private PPWAdapter ppwAdapter;
-    private TextView login;
+    private TextView login,log;
 
 //    极光
 public static boolean isForeground = false;
@@ -59,6 +60,7 @@ public static boolean isForeground = false;
     protected void initView() {
         verticalViewPager = bindView(R.id.main_vertical_vp);
         login = bindView(R.id.login);
+        log = bindView(R.id.log);
 
     }
 
@@ -87,6 +89,8 @@ public static boolean isForeground = false;
             }
         });
         login.setOnClickListener(this);
+        log.setOnClickListener(this);
+
         //测试分享
 
 
@@ -135,6 +139,11 @@ public static boolean isForeground = false;
                 Intent intent = new Intent(this, LoginActivty.class);
                 startActivity(intent);
                 break;
+            case R.id.log:
+                Intent intent1 = new Intent(this, WearShowActivity.class);
+                startActivity(intent1);
+                break;
+
         }
     }
 

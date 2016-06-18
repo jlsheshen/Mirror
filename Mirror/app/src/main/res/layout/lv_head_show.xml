@@ -33,7 +33,7 @@
         android:id="@+id/wear_show_stop_play_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/close_player"
+        android:src="@mipmap/white_cancel_image"
         android:layout_gravity="right"
         android:layout_marginRight="@dimen/normalMarginLeftAndRight"/>
 
