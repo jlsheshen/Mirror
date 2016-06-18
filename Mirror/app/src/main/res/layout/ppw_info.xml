@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_main_background"
+    android:background="@drawable/shape_ppw_background"
     android:orientation="vertical">
 
    <ListView
+       android:layout_marginTop="@dimen/ppw_listview_margintop"
        android:id="@+id/ppw_list"
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
