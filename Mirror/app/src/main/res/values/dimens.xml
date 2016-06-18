@@ -76,4 +76,11 @@
     <dimen name="buy_detail_user_address_heigh">192px</dimen>
     <dimen name="onely_one">1px</dimen>
     <dimen name="ppw_listview_margintop">70px</dimen>
+
+
+
+    <dimen name="normalMarginLeftAndRight">30px</dimen>
+    <dimen name="wearLVHeadVvMarginTop">20px</dimen>
+    <dimen name="itemWearShowIvHeight">400px</dimen>
+    <dimen name="wearShowBackMargin">40px</dimen>
 </resources>
