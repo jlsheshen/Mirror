@@ -14,7 +14,7 @@ import com.mirroreye.mirror.R;
  * Created by 秦谦谦 on 16/6/13 11:35.
  */
 public abstract class BaseFragment extends Fragment {
-    private Context context;
+    private static Context context;
 
     @Override
     public void onAttach(Context context) {

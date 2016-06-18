@@ -75,4 +75,5 @@
     <dimen name="buy_detail_user_info_heigh">272px</dimen>
     <dimen name="buy_detail_user_address_heigh">192px</dimen>
     <dimen name="onely_one">1px</dimen>
+    <dimen name="ppw_listview_margintop">70px</dimen>
 </resources>

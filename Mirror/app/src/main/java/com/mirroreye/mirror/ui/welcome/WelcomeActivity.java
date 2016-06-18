@@ -8,6 +8,8 @@ import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.base.BaseActivity;
 import com.mirroreye.mirror.ui.main.MainActivity;
 
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by 秦谦谦 on 16/6/13 11:26.
  */
@@ -42,5 +44,17 @@ public class WelcomeActivity extends BaseActivity {
                 finish();
             }
         }.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        JPushInterface.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        JPushInterface.onPause(this);
     }
 }

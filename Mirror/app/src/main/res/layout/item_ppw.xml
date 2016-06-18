@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/ppw_marginLeft"
         android:layout_marginTop="@dimen/ppw_tv_marginTop"
-        android:clickable="true"
         android:textColor="@drawable/selector_main_text"
         android:textSize="@dimen/ppw_tv_textSize" />
 

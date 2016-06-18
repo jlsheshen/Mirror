@@ -13,6 +13,7 @@ import com.mirroreye.mirror.base.BaseApplication;
 import com.mirroreye.mirror.base.view.NoTouchScrollView;
 import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
 import com.mirroreye.mirror.utils.ScreensUtil;
+import com.mirroreye.mirror.utils.Share;
 
 /**
  * Created by ${jl} on 16/6/17.
@@ -21,6 +22,8 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
     Context context;
     NoTouchScrollView scrollView;
     OnSetBlowBarScroll onSetBlowBarScroll;
+    ImageView shareIv;
+
     private boolean state = false;
 
     public boolean isState() {
@@ -61,14 +64,31 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
+
         if (position == 0 ){
             convertView = LayoutInflater.from(context).inflate(R.layout.item_goods_detail_lower_frist_head_lv,parent,false);
+
+            shareIv = (ImageView) convertView.findViewById(R.id.goods_share);
+            shareIv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Share share=new Share(context);
+                    share.setUrl("http://www.baidu.com");
+                    share.setText("我是杀上古");
+                    share.setImageUrl("http://img3.duitang.com/uploads/item/201605/25/20160525093455_Qa2yR.jpeg");
+                    share.showShare();
+                }
+            });
+
+
             if (state){
                 onSetBlowBarScroll.blowBarOut();
                 state = false;
 
             }
         }else if (position == 1){
+
+
 
             if (state){
                 onSetBlowBarScroll.blowBarOut();

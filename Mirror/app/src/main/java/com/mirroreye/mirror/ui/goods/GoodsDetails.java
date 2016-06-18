@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.AbsListView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -19,6 +20,7 @@ import com.mirroreye.mirror.base.view.ScrollListenerListView;
 import com.mirroreye.mirror.listener.OnFrontScrollListener;
 import com.mirroreye.mirror.listener.OnListScrollListener;
 import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
+import com.mirroreye.mirror.utils.Share;
 
 /**
  * Created by liangduo on 16/6/15.
@@ -77,6 +79,8 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         outAnim = ObjectAnimator.ofFloat(blowBar,"translationX",0,-720);
         outAnim.setInterpolator(new DecelerateInterpolator());
         outAnim.setDuration(1000);
+
+
 
 
 

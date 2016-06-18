@@ -16,6 +16,7 @@ import com.mirroreye.mirror.base.BaseActivity;
 import com.mirroreye.mirror.bean.LoginBean;
 import com.mirroreye.mirror.utils.OkHttpClientManager;
 import com.mirroreye.mirror.utils.SPUtils;
+import com.mirroreye.mirror.utils.ThreeLogin;
 import com.squareup.okhttp.Request;
 
 /**
@@ -80,8 +81,11 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
                 break;
             //三方登錄
             case R.id.login_weibo:
+                new  ThreeLogin().weiBo();
                 break;
             case R.id.login_wechat:
+                new  ThreeLogin().qq();
+
                 break;
 
         }
@@ -102,7 +106,7 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
                 if(response.getResult().toString().equals(0)){
                     Toast.makeText(LoginActivty.this, response.getMsg().toString(), Toast.LENGTH_SHORT).show();
                 }else {
-                    Toast.makeText(LoginActivty.this, response.getData().getToken(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivty.this, "登录成功", Toast.LENGTH_SHORT).show();
                     SPUtils.put(LoginActivty.this,"userId",response.getData().getUid());
                     SPUtils.put(LoginActivty.this,"token",response.getData().getToken());
 
