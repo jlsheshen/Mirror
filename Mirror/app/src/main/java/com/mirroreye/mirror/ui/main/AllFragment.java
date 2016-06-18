@@ -35,6 +35,10 @@ import com.mirroreye.mirror.ui.goods.GoodsDetails;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.sina.weibo.SinaWeibo;
+import cn.sharesdk.tencent.qq.QQ;
 import de.greenrobot.event.EventBus;
 
 
@@ -149,6 +153,17 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //點擊確定退出登錄
+                                    //移除授权
+                                    Platform weibo = ShareSDK.getPlatform(SinaWeibo.NAME);
+                                    if (weibo.isValid())
+                                        weibo.removeAccount(true);
+                                    Platform qq = ShareSDK.getPlatform(QQ.NAME);
+                                    if (qq.isValid()){
+
+                                            qq.removeAccount();
+                                        }
+
+
                                 }
                             }).setNegativeButton("取消",null).show();
                         }
