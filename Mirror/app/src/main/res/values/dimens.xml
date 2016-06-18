@@ -54,6 +54,7 @@
     <dimen name="LoginIconPadding">50px</dimen>
     <dimen name="registerSendCodeTvSize">26px</dimen>
     <dimen name="registerSendCodeWidth">200px</dimen>
+    <dimen name="wearShowBackMargin">40px</dimen>
 
 
 </resources>

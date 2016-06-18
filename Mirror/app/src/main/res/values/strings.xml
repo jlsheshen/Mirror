@@ -25,4 +25,5 @@
     <string name="registerTitleTv">創建賬號</string>
     <string name="registerSetPswTv">設置密碼</string>
     <string name="registerSendCodeTv">發送驗證碼</string>
+    <string name="wearShowTitle">商品细节展示</string>
 </resources>
