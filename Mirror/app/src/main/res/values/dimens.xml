@@ -70,4 +70,5 @@
     <dimen name="ppw_tv_textSize">28px</dimen>
     <dimen name="ppw_image_marginTop">22px</dimen>
     <dimen name="ppw_linear_marginTop">0px</dimen>
+    <dimen name="good_detail_blow_height">134px</dimen>
 </resources>

@@ -22,8 +22,12 @@ public class ScreensUtil {
 
         return getScreenMetrics().widthPixels;
     }
-    public static int getScreenHeight(){
-        return getScreenMetrics().heightPixels;
+    public static int getScreenHeight()
+    {
+        WindowManager wm = (WindowManager) BaseApplication.getContext().getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(outMetrics);
+        return outMetrics.heightPixels;
     }
 
 }
