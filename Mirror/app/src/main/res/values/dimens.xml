@@ -71,4 +71,8 @@
     <dimen name="ppw_image_marginTop">22px</dimen>
     <dimen name="ppw_linear_marginTop">0px</dimen>
     <dimen name="good_detail_blow_height">134px</dimen>
+    <dimen name="bigest_text_size">40px</dimen>
+    <dimen name="buy_detail_user_info_heigh">272px</dimen>
+    <dimen name="buy_detail_user_address_heigh">192px</dimen>
+    <dimen name="onely_one">1px</dimen>
 </resources>

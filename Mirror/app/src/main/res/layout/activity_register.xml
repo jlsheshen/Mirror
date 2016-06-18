@@ -59,7 +59,10 @@
             android:textCursorDrawable="@mipmap/cursor"
             android:layout_height="@dimen/loginEtHeight"
             android:layout_marginTop="@dimen/loginPhoneEtMarginTop"
-            android:background="@drawable/shape_login_et_border"/>
+            android:background="@drawable/shape_login_et_border"
+            android:inputType="phone"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,6 +83,8 @@
                 android:textCursorDrawable="@mipmap/cursor"
                 android:layout_height="@dimen/loginEtHeight"
                 android:background="@drawable/shape_login_et_border"
+                android:inputType="number"
+
                 />
             <Button
                 android:id="@+id/register_send_code"

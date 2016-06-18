@@ -64,7 +64,9 @@
                 android:layout_height="@dimen/loginEtHeight"
                 android:textCursorDrawable="@mipmap/cursor"
                 android:layout_marginTop="@dimen/loginPhoneEtMarginTop"
-                android:background="@drawable/shape_login_et_border"/>
+                android:background="@drawable/shape_login_et_border"
+                android:inputType="phone"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -76,7 +78,7 @@
 
             <EditText
                 android:id="@+id/login_psw_et"
-                android:inputType="numberPassword"
+                android:inputType="textPassword"
                 android:layout_width="match_parent"
                 android:textCursorDrawable="@mipmap/cursor"
                 android:layout_height="@dimen/loginEtHeight"
@@ -93,7 +95,8 @@
                 android:textColor="@color/mainTextViewColor"
                 android:textSize="@dimen/loginBtnTvSize"
                 android:background="@color/loginEtBorder"
-                android:gravity="center"/>
+                android:gravity="center"
+                />
 
             <Button
                 android:id="@+id/login_register"
