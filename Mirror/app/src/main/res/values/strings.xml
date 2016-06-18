@@ -25,5 +25,12 @@
     <string name="registerTitleTv">創建賬號</string>
     <string name="registerSetPswTv">設置密碼</string>
     <string name="registerSendCodeTv">發送驗證碼</string>
-    <string name="wearShowTitle">商品细节展示</string>
+    <string name="BrowseAll">瀏覽所有分類</string>
+    <string name="browse_the_flat_glasses">瀏覽平光眼鏡</string>
+    <string name="Viewing_the_sun_glasses">瀏覽太陽眼鏡</string>
+    <string name="Special_to_share">專題分享</string>
+    <string name="ShoppingCart">我的購物車</string>
+    <string name="ReturnToTheHomePage">返回首頁</string>
+    <string name="quit">退出</string>
+    <string name="wearShowTitle">商品細節展示</string>
 </resources>
