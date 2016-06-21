@@ -2,61 +2,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="@dimen/storyContentTextBackgroundWidth"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/storyBottomMargin"
-        android:background="@mipmap/story_detail_typetwo_content_text_background"
-        >
-        <!--<ImageView-->
-            <!--android:layout_width="@dimen/storyContentTextBackgroundWidth"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:minHeight="@dimen/cartTvMarginTop"-->
-            <!--android:src="@mipmap/story_detail_typetwo_content_text_background"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--/>-->
+        android:background="@mipmap/story_detail_typetwo_content_text_background">
+
 
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/storyTitleMargin"
-            android:layout_marginRight="@dimen/storyTitleMargin"
-            android:layout_marginLeft="@dimen/storyTitleMargin"
-            android:textSize="@dimen/smallTitleSize"
-            android:textColor="@color/mainTextViewColor"
-            android:text="我来打个样"
             android:id="@+id/story_detail_name"
-            />
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mainRvMarginLeft"
-            android:textSize="@dimen/middleTitleSize"
-            android:textColor="@color/mainTextViewColor"
-            android:layout_marginRight="@dimen/storyTitleMargin"
             android:layout_marginLeft="@dimen/storyTitleMargin"
+            android:layout_marginRight="@dimen/storyTitleMargin"
+            android:layout_marginTop="@dimen/storyTitleMargin"
             android:text="我来打个样"
+            android:textColor="@color/mainTextViewColor"
+            android:textSize="@dimen/smallTitleSize" />
+
+        <TextView
             android:id="@+id/story_detail_title"
-            android:layout_below="@id/story_detail_name"
-            />
-        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mainRvMarginLeft"
-            android:layout_marginBottom="@dimen/mainRvMarginLeft"
-            android:textSize="@dimen/smallContentSize"
-            android:textColor="@color/mainTextViewColor"
-            android:layout_marginRight="@dimen/storyTitleMargin"
+            android:layout_below="@id/story_detail_name"
             android:layout_marginLeft="@dimen/storyTitleMargin"
+            android:layout_marginRight="@dimen/storyTitleMargin"
+            android:layout_marginTop="@dimen/mainRvMarginLeft"
             android:text="我来打个样"
+            android:textColor="@color/mainTextViewColor"
+            android:textSize="@dimen/middleTitleSize" />
+
+        <TextView
             android:id="@+id/story_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/story_detail_title"
-            />
-
-
+            android:layout_marginBottom="@dimen/mainRvMarginLeft"
+            android:layout_marginLeft="@dimen/storyTitleMargin"
+            android:layout_marginRight="@dimen/storyTitleMargin"
+            android:layout_marginTop="@dimen/mainRvMarginLeft"
+            android:text="我来打个样"
+            android:textColor="@color/mainTextViewColor"
+            android:textSize="@dimen/smallContentSize" />
 
 
     </RelativeLayout>
