@@ -97,4 +97,11 @@
 
     <!--購買詳情-->
 
+    <!--专题详情-只有三行的详情-->
+    <dimen name="middleTitleTextSize">70px</dimen>
+    <dimen name="specialPinkMarginLeft">34px</dimen>
+    <dimen name="specialPinkMarginTop">10px</dimen>
+    <dimen name="specialPinkMarginBottom">70px</dimen>
+    <dimen name="specialThreeMarginTop">20px</dimen>
+    <dimen name="specialThreeTextSize">26px</dimen>
 </resources>

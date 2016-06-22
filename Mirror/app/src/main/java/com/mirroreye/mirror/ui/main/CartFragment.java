@@ -1,6 +1,8 @@
 package com.mirroreye.mirror.ui.main;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.view.Gravity;
@@ -22,6 +24,11 @@ import com.mirroreye.mirror.interfaces.PPWToFragment;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.sina.weibo.SinaWeibo;
+import cn.sharesdk.tencent.qq.QQ;
 
 /**
  * Created by liangduo on 16/6/14.
@@ -78,8 +85,40 @@ public class CartFragment extends BaseFragment {
                         popupWindow.setTouchable(true);
                         Log.d("AllFragment", "position:" + position);
 
+
+                        if (position==5){
+                            position=0;
+                        }
+                        if (position==6){
+                            //退出事件
+                            position=0;
+                            AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+                            builder.setTitle("確定退出登錄");
+                            builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    //點擊確定退出登錄
+                                    //移除授权
+                                    Platform weibo = ShareSDK.getPlatform(SinaWeibo.NAME);
+                                    if (weibo.isValid())
+                                        weibo.removeAccount(true);
+                                    Platform qq = ShareSDK.getPlatform(QQ.NAME);
+                                    if (qq.isValid()){
+
+                                        qq.removeAccount();
+                                    }
+
+
+                                }
+                            }).setNegativeButton("取消",null).show();
+                        }
+
                         ppwToFragment.getPosition(position);
+                        ppwAdapter.setType(position);
                         popupWindow.dismiss();
+
+
+
                     }
                 }
         );

@@ -10,6 +10,7 @@
 
     <!--分类字体颜色-->
     <color name="mainTextViewColor">#ffffff</color>
+    <color name="mainTextViewPinkColor">#F04055</color>
     <!--横向RecyclerView中的 字体颜色-->
     <color name="itemRecyclerViewTvColor">#000000</color>
     <!--登录与注册界面的背景色-->
