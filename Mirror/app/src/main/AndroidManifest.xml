@@ -55,8 +55,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.address_list.AddressListActivity">
-        <!--<activity android:name=".ui.welcome.WelcomeActivity">-->
+        <activity android:name=".ui.welcome.WelcomeActivity">
         <!--<activity android:name=".ui.goods.GoodsDetails">-->
         <!--<activity android:name=".ui.login.LoginActivty">-->
 
@@ -72,6 +71,7 @@
         <activity android:name=".ui.story_detail.StoryDetailActivity"/>
         <activity android:name=".ui.goods.GoodsDetails"/>
         <activity android:name=".ui.show.WearShowActivity"/>
+        <activity android:name=".ui.address_list.AddressListActivity"/>
 
         <activity android:name=".ui.buy_detail.BuyDetail"/>
         <activity android:name=".ui.add_address.AddAddressActivity"/>

@@ -39,7 +39,7 @@ public class AddAddressActivity extends BaseActivity implements View.OnClickList
         addPhone = bindView(R.id.add_address_phone_et);
         submitAdd = bindView(R.id.add_address_btn);
         close  =bindView(R.id.buy_detail_cancel_iv);
-       // title = bindView(R.id.personage_detail_title_tv);
+        title = bindView(R.id.personage_detail_title_tv);
 
     }
 

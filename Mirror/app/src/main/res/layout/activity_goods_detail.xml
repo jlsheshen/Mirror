@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/return_button"
             android:layout_weight="1"
+            android:id="@+id/goods_detail_back_iv"
 
             />
         <ImageView
@@ -49,6 +50,7 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/adorn"
             android:layout_weight="2"
+            android:id="@+id/goods_detail_goshow_iv"
 
 
             />
@@ -59,6 +61,8 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/buybutton"
             android:layout_weight="3"
+            android:id="@+id/goods_detail_gobuydetail_iv"
+
 
             />
 

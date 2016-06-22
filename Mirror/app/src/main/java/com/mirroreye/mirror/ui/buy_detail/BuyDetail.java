@@ -8,9 +8,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mirroreye.mirror.R;
+import com.mirroreye.mirror.adapter.AddressListAdapter;
 import com.mirroreye.mirror.base.BaseActivity;
 import com.mirroreye.mirror.base.value.InputParameter;
 import com.mirroreye.mirror.bean.BuyDtailBean;
+import com.mirroreye.mirror.ui.add_address.AddAddressActivity;
+import com.mirroreye.mirror.ui.add_address.EditAddressActivity;
+import com.mirroreye.mirror.ui.address_list.AddressListActivity;
 import com.mirroreye.mirror.utils.OkHttpClientManager;
 import com.mirroreye.mirror.utils.SPUtils;
 import com.squareup.okhttp.Request;
@@ -23,7 +27,6 @@ public class BuyDetail extends BaseActivity {
     ImageView commodityIv;
     LinearLayout noDateLay,haveDateLay;
     String token;
-    Intent intent;
 
     @Override
     public int setLayout() {
@@ -41,8 +44,6 @@ public class BuyDetail extends BaseActivity {
         noDateLay = bindView(R.id.buy_detail_nodate_layout);
         haveDateLay = bindView(R.id.buy_detail_havedate_layout);
         phoneTv = bindView(R.id.buy_detail_phone_tv);
-
-
 
 
 
@@ -74,7 +75,14 @@ public class BuyDetail extends BaseActivity {
 
 
                 if (response.getData() != null) {
-                    changeAddressTv.setText("增加地址");
+                    changeAddressTv.setText("修改地址");
+                    changeAddressTv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(BuyDetail.this, AddressListActivity.class);
+                            startActivity(intent);
+                        }
+                    });
                     noDateLay.setVisibility(View.GONE);
                     haveDateLay.setVisibility(View.VISIBLE);
 
@@ -89,7 +97,20 @@ public class BuyDetail extends BaseActivity {
 
                         }
                     }
+                }else {
+                    changeAddressTv.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(BuyDetail.this, EditAddressActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+
                 }
+
+
+
             }
         },new OkHttpClientManager.Param[]{
                 new OkHttpClientManager.Param(InputParameter.TOKEN,token),

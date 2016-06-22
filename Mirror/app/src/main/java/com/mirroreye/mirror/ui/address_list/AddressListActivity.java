@@ -1,8 +1,10 @@
 package com.mirroreye.mirror.ui.address_list;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ import com.mirroreye.mirror.bean.AddressListBean;
 import com.mirroreye.mirror.bean.VerificationBean;
 import com.mirroreye.mirror.listener.RvDeteleDataListener;
 import com.mirroreye.mirror.listener.SetViewHeightListener;
+import com.mirroreye.mirror.ui.add_address.AddAddressActivity;
 import com.mirroreye.mirror.utils.OkHttpClientManager;
 import com.mirroreye.mirror.utils.SPUtils;
 import com.squareup.okhttp.Request;
@@ -26,7 +29,7 @@ public class AddressListActivity extends BaseActivity implements RvDeteleDataLis
     RecyclerView recyclerView;
     AddressListAdapter adapter;
     String token;
-    TextView addTv,titleTv;
+    TextView addTv,titleTv,addAddressTv;
     ImageView blackIv;
 
     @Override
@@ -40,6 +43,14 @@ public class AddressListActivity extends BaseActivity implements RvDeteleDataLis
         addTv = bindView(R.id.address_list_add_tv);
         //titleTv = bindView(R.id.personage_detail_title_tv);
         //titleTv.setText("我的所有地址");
+        addAddressTv = bindView(R.id.address_list_add_tv);
+        addAddressTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddressListActivity.this , AddAddressActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

@@ -1,6 +1,8 @@
 package com.mirroreye.mirror.ui.goods;
 
 import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
@@ -20,6 +22,8 @@ import com.mirroreye.mirror.base.view.ScrollListenerListView;
 import com.mirroreye.mirror.listener.OnFrontScrollListener;
 import com.mirroreye.mirror.listener.OnListScrollListener;
 import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
+import com.mirroreye.mirror.ui.buy_detail.BuyDetail;
+import com.mirroreye.mirror.ui.show.WearShowActivity;
 import com.mirroreye.mirror.utils.Share;
 
 /**
@@ -33,6 +37,7 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
     ObjectAnimator intoAnim;
     ObjectAnimator outAnim;
     CountDownTimer countDownTimer;
+    ImageView backIv,goShowIv,goBuyIv;
 
 
 
@@ -47,6 +52,33 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         noTouchScrollView = bindView(R.id.goods_detail_sv);
         maxHighNoTouchListView = bindView(R.id.goods_detail_front_lv);
         blowBar = bindView(R.id.goods_detail_blow_bar);
+        backIv = bindView(R.id.goods_detail_back_iv);
+        goShowIv = bindView(R.id.goods_detail_goshow_iv);
+        goBuyIv = bindView(R.id.goods_detail_gobuydetail_iv);
+
+        backIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
+        goShowIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GoodsDetails.this,WearShowActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        goBuyIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GoodsDetails.this,BuyDetail.class);
+                startActivity(intent);
+
+            }
+        });
 
 
         scrollListenerListView.setOnListScrollListener(this);
@@ -64,11 +96,9 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         scrollListenerListView.setAdapter(lowerAdapter);
         lowerAdapter.setScrollView(noTouchScrollView);
 
-
-
-
-
     }
+
+
 
     @Override
     protected void initData() {
@@ -79,12 +109,6 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         outAnim = ObjectAnimator.ofFloat(blowBar,"translationX",0,-720);
         outAnim.setInterpolator(new DecelerateInterpolator());
         outAnim.setDuration(1000);
-
-
-
-
-
-
 
     }
 
@@ -121,15 +145,14 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         blowBar.setVisibility(View.VISIBLE);
         intoAnim.start();
 
-
-
-
     }
 
     @Override
     public void blowBarOut() {
         outAnim.start();
 //        blowBar.setVisibility(View.GONE);
-
     }
+
+
+
 }
