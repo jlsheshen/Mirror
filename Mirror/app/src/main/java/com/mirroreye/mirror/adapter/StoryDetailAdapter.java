@@ -5,9 +5,11 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.listener.OnViewPagerChangeListener;
-
 
 
 
@@ -54,5 +56,7 @@ public class StoryDetailAdapter extends PagerAdapter{
         return view == object;
     }
 }
+
+
 
 

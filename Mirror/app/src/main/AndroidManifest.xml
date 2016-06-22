@@ -73,7 +73,7 @@
         <activity android:name=".ui.goods.GoodsDetails"/>
         <activity android:name=".ui.show.WearShowActivity"/>
 
-    <activity android:name=".ui.buy_detail.BuyDetail"/>
+        <activity android:name=".ui.buy_detail.BuyDetail"/>
         <activity android:name=".ui.add_address.AddAddressActivity"/>
         <activity android:name=".ui.add_address.EditAddressActivity"/>
 

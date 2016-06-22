@@ -38,8 +38,8 @@ public class AddressListActivity extends BaseActivity implements RvDeteleDataLis
     protected void initView() {
         recyclerView = bindView(R.id.address_list_rv);
         addTv = bindView(R.id.address_list_add_tv);
-        titleTv = bindView(R.id.personage_detail_title_tv);
-        titleTv.setText("我的所有地址");
+        //titleTv = bindView(R.id.personage_detail_title_tv);
+        //titleTv.setText("我的所有地址");
 
 
 

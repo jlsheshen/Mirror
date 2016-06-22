@@ -39,7 +39,7 @@ public class EditAddressActivity extends BaseActivity implements View.OnClickLis
         editPhone = bindView(R.id.edit_address_phone_et);
         submitEdit = bindView(R.id.edit_address_btn);
         close  =bindView(R.id.buy_detail_cancel_iv);
-        title = bindView(R.id.personage_detail_title_tv);
+        //title = bindView(R.id.personage_detail_title_tv);
     }
 
     @Override

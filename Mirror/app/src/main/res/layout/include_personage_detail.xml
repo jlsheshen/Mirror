@@ -11,13 +11,12 @@
         android:orientation="horizontal"
         android:padding="@dimen/mainClassifyIvMarginLeft">
 
-        <TextView
-
-            android:id="@+id/personage_detail_title_tv"
-
-            android:textSize="@dimen/bigest_text_size"
-            android:id="@+id/personage_detail_title_tv"
-            />
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/personage_detail_title_tv"-->
+            <!--android:textSize="@dimen/bigest_text_size"-->
+            <!--/>-->
 
 
         <ImageView
