@@ -1,0 +1,86 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--主界面分类文字-->
+    <dimen name="mainClassifyTvMarginTop">20px</dimen>
+    <dimen name="mainClassifyTvMarginLeft">30px</dimen>
+    <!--主界面分类文字的大小-->
+    <dimen name="mainClassifyTvSize">30px</dimen>
+
+    <!--主界面分类文字距右面小箭头的距离-->
+    <dimen name="mainClassifyIvMarginLeft">9px</dimen>
+    <!--主界面分类标题下的横线-->
+    <dimen name="mainClassifyLineMarginTop">14px</dimen>
+    <!--主界面分類下的提示 距離上方橫線的距離-->
+    <dimen name="mainClassifyNoticeMarginTop">26px</dimen>
+    <!--主界面分類下的提示的字體大小-->
+    <dimen name="mainClassifyNoticeTvSize">24px</dimen>
+    <!--主界面下方RecyclerView距離上方的距離-->
+    <dimen name="mainRvMarginTop">94px</dimen>
+    <!--主界面下方RecyclerView距離左邊的距離-->
+    <dimen name="mainRvMarginLeft">22px</dimen>
+
+    <!--購物車中間房子圖片距離上方的距離-->
+    <dimen name="cartIvMarginTop">350px</dimen>
+    <!--購物車中無商品的文字距離上放圖片的距離-->
+    <dimen name="cartTvMarginTop">30px</dimen>
+    <dimen name="horizontalItemIvHeight">595px</dimen>
+    <dimen name="MarginTopGoodsNameWhiteCancel">50px</dimen>
+    <dimen name="itemHorizontalTvMargin">32px</dimen>
+    <dimen name="itemHorizontalGoodsNameSize">30px</dimen>
+    <dimen name="itemHorizontalBlackLineMarginTop">30px</dimen>
+    <dimen name="itemHorizontalBlackLineWidth">474px</dimen>
+    <dimen name="itemHorizontalProductAreaMarginTop">16px</dimen>
+    <dimen name="itemHorizontalModelMarginTop">16px</dimen>
+    <dimen name="itemHorizontalProductAreaSize">24px</dimen>
+    <dimen name="itemHorizontalModelTvSize">30px</dimen>
+    <dimen name="loginTitleMarginTop">30px</dimen>
+    <dimen name="loginTitleTvSize">34px</dimen>
+    <dimen name="LoginTitleTvSize">34px</dimen>
+    <dimen name="LoginTitlemarginLeft">46px</dimen>
+    <dimen name="LoginLineMarginTop">20px</dimen>
+    <dimen name="LoginMarginLeft">30px</dimen>
+    <dimen name="LoginPhoneTvMarginTop">40px</dimen>
+    <dimen name="LoginTvSize">24px</dimen>
+    <dimen name="loginPhoneEtMarginTop">20px</dimen>
+    <dimen name="loginEtHeight">80px</dimen>
+    <dimen name="loginPswTvMarginTop">30px</dimen>
+    <dimen name="loginBtnMarginTop">40px</dimen>
+    <dimen name="loginBtnTvSize">30px</dimen>
+    <dimen name="loginRegisterMarginLogin">30px</dimen>
+    <dimen name="loginForgetPswTvSize">26px</dimen>
+    <dimen name="LoginIconPadding">50px</dimen>
+    <dimen name="registerSendCodeTvSize">26px</dimen>
+    <dimen name="registerSendCodeWidth">200px</dimen>
+    <dimen name="shareMargin">40px</dimen>
+    <dimen name="storyContentTextBackgroundWidth">640px</dimen>
+    <dimen name="storyTitleMargin">65px</dimen>
+    <dimen name="smallTitleSize">22px</dimen>
+    <dimen name="storyBottomMargin">135px</dimen>
+    <dimen name="middleTitleSize">34px</dimen>
+    <dimen name="smallContentSize">20px</dimen>
+
+
+
+    <!--ppw的-->
+
+    <dimen name="ppw_marginLeft">48px</dimen>
+    <dimen name="ppw_tv_marginTop">78px</dimen>
+    <dimen name="ppw_tv_textSize">28px</dimen>
+    <dimen name="ppw_image_marginTop">22px</dimen>
+    <dimen name="ppw_linear_marginTop">0px</dimen>
+    <dimen name="good_detail_blow_height">134px</dimen>
+    <dimen name="bigest_text_size">40px</dimen>
+    <dimen name="buy_detail_user_info_heigh">272px</dimen>
+    <dimen name="buy_detail_user_address_heigh">192px</dimen>
+    <dimen name="onely_one">1px</dimen>
+    <dimen name="ppw_listview_margintop">70px</dimen>
+
+
+
+    <dimen name="normalMarginLeftAndRight">30px</dimen>
+    <dimen name="wearLVHeadVvMarginTop">20px</dimen>
+    <dimen name="itemWearShowIvHeight">400px</dimen>
+    <dimen name="wearShowBackMargin">40px</dimen>
+</resources>

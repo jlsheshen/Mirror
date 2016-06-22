@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--注册界面-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/loginTitleMarginTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerTitleTv"
+            android:layout_marginLeft="@dimen/LoginTitlemarginLeft"
+            android:textSize="@dimen/LoginTitleTvSize"/>
+
+        <ImageView
+            android:id="@+id/register_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/LoginTitlemarginLeft"
+            android:src="@mipmap/close"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/LoginMarginLeft"
+        android:layout_marginRight="@dimen/LoginMarginLeft">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/LoginLineMarginTop"
+            android:src="@mipmap/login_line"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/LoginPhoneTvMarginTop"
+            android:textSize="@dimen/LoginTvSize"
+            android:text="@string/LoginPhoneNumberTv"/>
+
+        <EditText
+            android:id="@+id/register_phone_num_et"
+            android:layout_width="match_parent"
+            android:textCursorDrawable="@mipmap/cursor"
+            android:layout_height="@dimen/loginEtHeight"
+            android:layout_marginTop="@dimen/loginPhoneEtMarginTop"
+            android:background="@drawable/shape_login_et_border"
+            android:inputType="phone"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/LoginTvSize"
+            android:text="验证码"
+            android:layout_marginTop="@dimen/loginPswTvMarginTop"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginPhoneEtMarginTop"
+            >
+            <EditText
+                android:id="@+id/register_code_et"
+                android:layout_width="match_parent"
+                android:textCursorDrawable="@mipmap/cursor"
+                android:layout_height="@dimen/loginEtHeight"
+                android:background="@drawable/shape_login_et_border"
+                android:inputType="number"
+
+                />
+            <Button
+                android:id="@+id/register_send_code"
+                android:layout_width="@dimen/registerSendCodeWidth"
+                android:layout_height="@dimen/loginEtHeight"
+                android:background="@color/loginRegisterTvBackground"
+                android:layout_alignParentRight="true"
+                android:text="@string/registerSendCodeTv"
+                android:gravity="center"
+                android:textSize="@dimen/registerSendCodeTvSize"
+                android:textColor="@color/mainTextViewColor"/>
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/LoginTvSize"
+            android:text="@string/registerSetPswTv"
+            android:layout_marginTop="@dimen/loginPswTvMarginTop"
+            />
+
+        <EditText
+            android:id="@+id/register_set_psw"
+            android:layout_width="match_parent"
+            android:textCursorDrawable="@mipmap/cursor"
+            android:layout_height="@dimen/loginEtHeight"
+            android:layout_marginTop="@dimen/loginPhoneEtMarginTop"
+            android:background="@drawable/shape_login_et_border"
+            />
+
+        <Button
+            android:id="@+id/register_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/loginEtHeight"
+            android:layout_marginTop="@dimen/loginRegisterMarginLogin"
+            android:text="@string/loginRegisterTv"
+            android:textColor="@color/mainTextViewColor"
+            android:textSize="@dimen/loginBtnTvSize"
+            android:background="@color/loginRegisterTvBackground"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

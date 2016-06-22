@@ -72,9 +72,16 @@
         <activity android:name=".ui.story_detail.StoryDetailActivity"/>
         <activity android:name=".ui.goods.GoodsDetails"/>
         <activity android:name=".ui.show.WearShowActivity"/>
-    <activity android:name=".ui.buy_detail.BuyDetail"/>
 
-    <meta-data
+    <activity android:name=".ui.buy_detail.BuyDetail"/>
+        <activity android:name=".ui.add_address.AddAddressActivity"/>
+        <activity android:name=".ui.add_address.EditAddressActivity"/>
+
+
+
+
+        <meta-data
+
             android:name="design_width"
             android:value="720" />
         <meta-data

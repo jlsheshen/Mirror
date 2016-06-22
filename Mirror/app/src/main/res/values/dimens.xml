@@ -84,4 +84,17 @@
     <dimen name="itemWearShowIvHeight">400px</dimen>
     <dimen name="wearShowBackMargin">40px</dimen>
     <dimen name="scrollItem">660px</dimen>
+    <dimen name="BuyInforTipTvMarginLeft">20px</dimen>
+    <dimen name="BuyInforTipTextSize">26px</dimen>
+    <dimen name="BuyInforAddAddressMarginTop">40px</dimen>
+    <dimen name="BuyInforIntroduceTvMarginTop">30px</dimen>
+    <dimen name="MoneyTextSize">24px</dimen>
+    <dimen name="BuyPriceMarginLeft">8px</dimen>
+    <dimen name="AddAddressHeight">160px</dimen>
+    <dimen name="MyAddressAddAddressTv">50px</dimen>
+    <dimen name="MyAddressAddTvMarginTop">160px</dimen>
+
+
+    <!--購買詳情-->
+
 </resources>

@@ -8,9 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.mirroreye.mirror.R;
-import com.mirroreye.mirror.bean.B;
 
-import java.util.List;
 
 /**
  * Created by liangduo on 16/6/16.

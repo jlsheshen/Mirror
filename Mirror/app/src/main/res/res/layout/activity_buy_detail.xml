@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="@dimen/cartTvMarginTop"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mainClassifyIvMarginLeft"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="购买详情"
+            android:textSize="@dimen/bigest_text_size"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close"
+            android:id="@+id/buy_detail_cancel_iv"
+
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/black_line"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buy_detail_user_info_heigh"
+        android:layout_marginTop="@dimen/bigest_text_size"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buy_detail_user_address_heigh"
+            android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/LoginLineMarginTop"
+            android:textSize="@dimen/itemHorizontalProductAreaSize"
+            android:text="填写收件人信息"
+            />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/buy_detail_user_address_heigh"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/LoginLineMarginTop"
+                android:textSize="@dimen/itemHorizontalProductAreaSize"
+                android:text="收件人:"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/itemHorizontalProductAreaSize"
+
+
+
+
+
+
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onely_one"
+            android:background="#dddddd"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/loginEtHeight"
+            android:textSize="@dimen/itemHorizontalProductAreaSize"
+            android:text="填写地址"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/LoginLineMarginTop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/buy_detail_user_info_heigh"
+        >
+        <ImageView
+            android:layout_width="@dimen/registerSendCodeWidth"
+            android:layout_height="@dimen/registerSendCodeWidth"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/buy_detail_commodity_iv"
+
+            />
+        <TextView
+            android:layout_marginTop="@dimen/bigest_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/cartTvMarginTop"
+            android:layout_toRightOf="@id/buy_detail_commodity_iv"
+            android:text="商品名称"
+            android:textColor="#333333"
+            android:id="@+id/buy_detail_commodity_name_tv"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cartTvMarginTop"
+            android:textSize="@dimen/loginForgetPswTvSize"
+            android:layout_below="@id/buy_detail_commodity_name_tv"
+            android:layout_toRightOf="@id/buy_detail_commodity_iv"
+            android:textColor="#333333"
+            android:text="商品描述商品描述商品描述商品描述商品描述商品描述商品描述商品描述"
+            android:id="@+id/buy_detail_commodity_describe_tv"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/loginForgetPswTvSize"
+            android:textStyle="bold"
+            android:text="¥"
+            android:textColor="#ff55ab"
+            android:layout_toRightOf="@id/buy_detail_commodity_iv"
+            android:layout_below="@id/buy_detail_commodity_describe_tv"
+            android:layout_marginTop="@dimen/cartTvMarginTop"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/loginEtHeight"
+        android:layout_marginTop="@dimen/LoginIconPadding"
+        android:background="@color/colorAccent"
+        android:textSize="@dimen/cartTvMarginTop"
+        android:text="确认下单"
+        android:gravity="center"
+        android:id="@+id/buy_detail_commodity_surebuy_tv"
+
+        />
+
+
+
+</LinearLayout>

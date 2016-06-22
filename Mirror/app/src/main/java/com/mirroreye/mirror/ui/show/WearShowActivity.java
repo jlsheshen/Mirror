@@ -48,6 +48,8 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
 
     private String videoUrl = "http://7rfkz6.com1.z0.glb.clouddn.com/360p_0043_XMTU3MjE1MDEwOA.mp4";
 
+
+
     @Override
     public int setLayout() {
         return R.layout.activity_wear_show;
@@ -105,7 +107,8 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
                 finish();
                 break;
             case R.id.wear_show_buy:
-                Toast.makeText(this, "不要點我", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "不要點我", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.wear_head_vv_start_iv:
                 stopPlayIv.setVisibility(View.VISIBLE);
