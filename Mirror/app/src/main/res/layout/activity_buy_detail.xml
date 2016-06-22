@@ -4,29 +4,7 @@
     android:layout_height="match_parent"
     android:padding="@dimen/cartTvMarginTop"
     >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/mainClassifyIvMarginLeft"
-        android:orientation="horizontal"
-        >
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="购买详情"
-            android:textSize="@dimen/bigest_text_size"
-            android:layout_weight="1"
-            android:layout_gravity="left"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/close"
-            android:id="@+id/buy_detail_cancel_iv"
-
-            />
-
-    </LinearLayout>
+    <include layout="@layout/include_personage_detail"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

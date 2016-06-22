@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--主界面的背景-->
+    <color name="mianBackgroundEndColor">#1a263e</color>
+    <color name="mianBackgroundStartColor">#1e4da1</color>
+
+    <!--分类字体颜色-->
+    <color name="mainTextViewColor">#ffffff</color>
+    <!--横向RecyclerView中的 字体颜色-->
+    <color name="itemRecyclerViewTvColor">#000000</color>
+    <!--登录与注册界面的背景色-->
+    <color name="backgroundBothLoginAndroidRegister">#f1f1f1</color>
+    <!--登录与注册界面的输入框的描边-->
+    <color name="loginEtBorder">#dfdfdf</color>
+
+    <!--登录和注册界面的可点击的TextView的背景-->
+    <color name="loginRegisterTvBackground">#d85958</color>
+
+
+    <!--主页&抽屉背景-渐变-->
+    <color name="color_main_backcolor_top">#1a263e</color>
+
+    <color name="color_main_backcolor_bottom">#2b4682</color>
+    
+    <!--主页&抽屉字体颜色设置-白色-->
+    <color name="color_main_text_default">#fff</color>
+    <color name="color_main_text_alpha">#25ffffff</color>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="600px"
+    android:layout_height="388px"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog_border"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="86px"
+            android:gravity="center"
+            android:textSize="30px"
+            android:text="选择支付方式"
+            android:visibility="visible" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#f1f1f1"/>
+
+        <LinearLayout
+            android:id="@+id/message_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="50px"
+            android:paddingTop="50px"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/dialog_positive_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="62px"
+                android:background="@mipmap/wechat_pay_button"
+                android:orientation="horizontal"
+               android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/we_chat_pay_icon"/>
+
+                <TextView
+                    android:id="@+id/dialog_positive_tv"
+                    android:text="微信支付"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="24px"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62px"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_nagtive_layout"
+                android:layout_marginTop="40px"
+                android:layout_width="wrap_content"
+                android:layout_height="62px"
+                android:background="@mipmap/wechat_pay_button"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/aply_payicon"/>
+
+                <TextView
+                    android:id="@+id/dialog_nagtive_tv"
+                    android:text="支付宝支付"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="24px"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="62px"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

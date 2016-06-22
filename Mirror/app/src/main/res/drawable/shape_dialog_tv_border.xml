@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 4.圆角 -->
+    <corners
+        android:radius="9dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="5dp"
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="25dp" />
+    <!-- radius为角的半径(弧度) 值越大角越圆
+         其他四个可以分别为四个角设置弧度(值可以不同)
+         其他四个属性可以覆盖radius,
+         即同时设置五个,radius属性无效
+         默认为1dp-->
+
+
+    <!-- 描边 -->
+    <stroke
+        android:width="1px"
+        android:color="@color/loginEtBorder"
+        android:dashWidth="1px" />
+
+    <!-- 3.填充 -->
+    <solid android:color="@android:color/white" />
+    <!-- 填充的颜色 十六进制-->
+</shape>

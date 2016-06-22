@@ -45,4 +45,11 @@
     <string name="logining">程序在后台执行, 请查看日志！</string>
     <string name="setting_su">设置成功</string>
     <string name="wearShowTitle">商品細節展示</string>
+    <string name="buyInformationTitleTv">購買詳情</string>
+    <string name="AddReceverName">添加收件人姓名</string>
+    <string name="AddReceverPhoneNum">添加聯絡電話號碼</string>
+    <string name="AddAddress">添加收货地址</string>
+    <string name="AddAddressBtnTv">提交地址</string>
+    <string name="MyAddressAddAddressTv">添加地址</string>
+    <string name="EditAddressEditChangeTv">提交修改</string>
 </resources>

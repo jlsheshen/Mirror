@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- 渐变 -->
+    <gradient
+        android:angle="90"
+        android:endColor="@color/mianBackgroundEndColor"
+        android:startColor="@color/mianBackgroundStartColor"
+        />
+
+
+    <!--渐变
+    <gradient
+        android:angle="90"                         - (渐变角度 整型(PS：当angle=0时，渐变色是从左向右。
+                                                     然后逆时针方向转，当angle=90时为从下往上。angle必须为45的整数倍))
+        android:centerColor="@android:color/black" - (渐变色的中间颜色)
+        android:centerX="0"                        - (渐变中心X点坐标的相对位置,值在0.1到1.0之间,默认0.5(中心))
+        android:centerY="0"                        - (渐变中心Y点坐标的相对位置,值在0.1到1.0之间,默认0.5(中心))
+        android:endColor="@android:color/black"    - (渐变色的结尾颜色)
+        android:gradientRadius="50"                - (渐变色半径.当 android:type="radial" 时才使用。
+                                       单独使用 android:type="radial"会报错。)
+        android:startColor="@android:color/white"  - (渐变色的开始颜色)
+        android:type="["linear(线性渐变，这是默认设置)" | "radial(放射性渐变，以开始色为中心)" | "sweep(扫描线式的渐变)"]"
+        android:useLevel="["true" | "false"]"      - (如果要使用LevelListDrawable对象，
+                                                      就要设置为true。设置为true无渐变。false有渐变色)
+    />-->
+
+
+</shape>

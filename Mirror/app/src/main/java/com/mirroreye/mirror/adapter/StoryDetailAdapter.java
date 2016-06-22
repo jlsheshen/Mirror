@@ -9,6 +9,9 @@ import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.listener.OnViewPagerChangeListener;
 
 
+
+
+
 /**
  * Created by ${jl} on 16/6/15.
  */
@@ -51,3 +54,5 @@ public class StoryDetailAdapter extends PagerAdapter{
         return view == object;
     }
 }
+
+

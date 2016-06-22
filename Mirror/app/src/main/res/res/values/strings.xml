@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Mirror</string>
+
+    <!--主界面分类文字-->
+    <string name="mainClassifyTvAll">瀏覽葰絠忿類</string>
+    <string name="mainClassifyTvGoggles">瀏覽平光鏡</string>
+    <string name="mainClassifyTvSunGlasses">瀏覽太陽鏡</string>
+    <string name="mainClassifyTvShare">專題分享</string>
+    <string name="mainClassifyTvCart">我的購物車</string>
+    <!--购物车提示文字-->
+    <string name="cartNull">您的購物車里沒有商品</string>
+
+
+    <!--主界面分类横线下的提示-->
+    <string name="belowMainClassifyLineTv">顯示排序為 最新推薦</string>
+    <!--主界面登錄-->
+    <string name="login">登錄</string>
+    <string name="LoginTitleTv">賬號登錄</string>
+    <string name="LoginPhoneNumberTv">手機號</string>
+    <string name="loginPswTv">密碼</string>
+    <string name="loginRegisterTv">創建賬號</string>
+    <string name="loginLoginTv">登錄</string>
+    <string name="loginForgetPswTv">忘記密碼?</string>
+    <string name="loginUseOtherNumberTv">使用社交賬號</string>
+    <string name="registerTitleTv">創建賬號</string>
+    <string name="registerSetPswTv">設置密碼</string>
+    <string name="registerSendCodeTv">發送驗證碼</string>
+    <string name="BrowseAll">瀏覽所有分類</string>
+    <string name="browse_the_flat_glasses">瀏覽平光眼鏡</string>
+    <string name="Viewing_the_sun_glasses">瀏覽太陽眼鏡</string>
+    <string name="Special_to_share">專題分享</string>
+    <string name="ShoppingCart">我的購物車</string>
+    <string name="ReturnToTheHomePage">返回首頁</string>
+    <string name="quit">退出</string>
+    <!--极光-->
+    <string name="hello">Hello World, JPush!</string>
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+    <string name="wearShowTitle">商品細節展示</string>
+</resources>
