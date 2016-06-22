@@ -110,8 +110,6 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
                     SPUtils.put(LoginActivty.this,"userId",response.getData().getUid());
                     SPUtils.put(LoginActivty.this,"token",response.getData().getToken());
 
-
-
                     finish();
 
 

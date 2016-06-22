@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.mirroreye.mirror.base.view.SlidingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/sv"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="665px"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/address_list_left_lay"
+
+
+                >
+                <FrameLayout
+                    android:layout_width="520px"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/LoginLineMarginTop"
+                    android:paddingTop="@dimen/LoginLineMarginTop"
+                    android:paddingLeft="@dimen/LoginTvSize"
+                    android:paddingRight="@dimen/LoginTvSize"
+                    >
+                <include layout="@layout/include_consignee_info"
+                    /></FrameLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/edit"
+                    android:layout_marginTop="@dimen/storyTitleMargin"
+                    android:layout_marginRight="@dimen/storyTitleMargin"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/good_detail_blow_height"
+                android:layout_height="match_parent"
+                android:text="删除"
+                android:gravity="center"
+                android:id="@+id/address_list_item_detele"
+                android:layout_toRightOf="@id/address_list_left_lay"
+                android:background="@color/colorAccent"
+                />
+
+        </RelativeLayout>
+
+    </com.mirroreye.mirror.base.view.SlidingItemView>
+

@@ -99,6 +99,10 @@ public class SPUtils
         SharedPreferences.Editor editor = sp.edit();
         editor.remove(key);
         SharedPreferencesCompat.apply(editor);
+
+
+
+
     }
 
     /**

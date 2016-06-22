@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/cartTvMarginTop">
+    <include layout="@layout/include_personage_detail"/>
+    <TextView
+        android:layout_width="660px"
+        android:layout_height="@dimen/good_detail_blow_height"
+        android:layout_marginTop="@dimen/LoginIconPadding"
+        android:layout_gravity="center_horizontal"
+        android:text="添加地址"
+        android:gravity="center"
+        android:background="@color/mainTextViewColor"
+        android:id="@+id/address_list_add_tv"
+
+
+        />
+   
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/LoginLineMarginTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/address_list_rv"
+        android:background="@color/mainTextViewColor"
+        />
+
+</LinearLayout>

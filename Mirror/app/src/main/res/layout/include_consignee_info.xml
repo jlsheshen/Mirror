@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/buy_detail_havedate_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+        android:padding="@dimen/LoginLineMarginTop"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收件人"
+        android:textSize="@dimen/itemHorizontalProductAreaSize" />
+
+    <TextView
+        android:id="@+id/buy_detail_consignee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/itemHorizontalProductAreaSize" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/LoginLineMarginTop"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地址:"
+            android:textSize="@dimen/itemHorizontalProductAreaSize" />
+
+        <TextView
+            android:id="@+id/buy_detail_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/itemHorizontalProductAreaSize" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/LoginLineMarginTop"
+        >
+
+
+        <TextView
+            android:id="@+id/buy_detail_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="asd"
+            android:textSize="@dimen/itemHorizontalProductAreaSize" />
+    </LinearLayout>
+</LinearLayout>
