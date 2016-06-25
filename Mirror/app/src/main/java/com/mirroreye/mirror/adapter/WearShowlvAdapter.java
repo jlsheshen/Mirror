@@ -13,7 +13,7 @@ import com.mirroreye.mirror.R;
 /**
  * Created by liangduo on 16/6/16.
  */
-public class WearShowLvAdapter extends BaseAdapter {
+public class WearShowlvAdapter extends BaseAdapter {
     private int[] image;
     private Context context;
 
@@ -22,7 +22,7 @@ public class WearShowLvAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    public WearShowLvAdapter(Context context) {
+    public WearShowlvAdapter(Context context) {
         this.context = context;
     }
 

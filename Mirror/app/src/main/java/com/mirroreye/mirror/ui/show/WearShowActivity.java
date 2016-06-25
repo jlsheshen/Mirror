@@ -1,18 +1,14 @@
 package com.mirroreye.mirror.ui.show;
 
-import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.PopupWindow;
@@ -21,7 +17,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.mirroreye.mirror.R;
-import com.mirroreye.mirror.adapter.WearShowLvAdapter;
+import com.mirroreye.mirror.adapter.WearShowlvAdapter;
 import com.mirroreye.mirror.base.BaseActivity;
 
 
@@ -33,7 +29,7 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
     private RelativeLayout wearShowAty;
     private ListView wearShowLv;
     private int[] images = {R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e};
-    private WearShowLvAdapter wearShowLvAdapter;
+    private WearShowlvAdapter wearShowLvAdapter;
 
     private ImageView lvHeadVvIv;
     private VideoView lvHeadVv;
@@ -82,7 +78,7 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
         lvHeadVvStartIv.setOnClickListener(this);
         stopPlayIv.setOnClickListener(this);
 
-        wearShowLvAdapter = new WearShowLvAdapter(this);
+        wearShowLvAdapter = new WearShowlvAdapter(this);
         wearShowLvAdapter.setImage(images);
         wearShowLv.setAdapter(wearShowLvAdapter);
 

@@ -86,7 +86,7 @@
                 android:inputType="number"
 
                 />
-            <Button
+            <TextView
                 android:id="@+id/register_send_code"
                 android:layout_width="@dimen/registerSendCodeWidth"
                 android:layout_height="@dimen/loginEtHeight"

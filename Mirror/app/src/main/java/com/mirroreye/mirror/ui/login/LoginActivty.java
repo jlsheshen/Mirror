@@ -3,6 +3,7 @@ package com.mirroreye.mirror.ui.login;
 import android.content.Intent;
 import android.graphics.Color;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +28,7 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
     private ImageView backIv;
     private EditText loginPhoneEt;
     private EditText loginPswEt;
-    private Button  loginBtn;
+    private Button loginBtn;
     private Button loginRegister;
     private ImageView weibo;
     private ImageView wechat;
@@ -65,7 +66,7 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.login_close:
                 finish();
                 break;
@@ -73,18 +74,17 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
                 loogin();
 
 
-
                 break;
             case R.id.login_register:
-                Intent intent = new Intent(this,RegisterActivity.class);
+                Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
                 break;
             //三方登錄
             case R.id.login_weibo:
-                new  ThreeLogin().weiBo();
+                new ThreeLogin().weiBo();
                 break;
             case R.id.login_wechat:
-                new  ThreeLogin().qq();
+                new ThreeLogin().qq();
 
                 break;
 
@@ -92,34 +92,41 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
     }
 
     private void loogin() {
-        OkHttpClientManager.postAsyn("http://api101.test.mirroreye.cn/index.php/user/login", new OkHttpClientManager.ResultCallback<LoginBean>() {
-            @Override
-            public void onError(Request request, Exception e) {
-                Toast.makeText(LoginActivty.this, e.toString(), Toast.LENGTH_SHORT).show();
+        Boolean phoneNumber = isMobileNO(loginPhoneEt.getText().toString());
+        if (phoneNumber == true) {
 
 
-            }
-
-            @Override
-            public void onResponse(LoginBean response) {
-
-                if(response.getResult().toString().equals(0)){
-                    Toast.makeText(LoginActivty.this, response.getMsg().toString(), Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(LoginActivty.this, "登录成功", Toast.LENGTH_SHORT).show();
-                    SPUtils.put(LoginActivty.this,"userId",response.getData().getUid());
-                    SPUtils.put(LoginActivty.this,"token",response.getData().getToken());
-
-                    finish();
+            OkHttpClientManager.postAsyn("http://api101.test.mirroreye.cn/index.php/user/login", new OkHttpClientManager.ResultCallback<LoginBean>() {
+                        @Override
+                        public void onError(Request request, Exception e) {
+                            Toast.makeText(LoginActivty.this, e.toString(), Toast.LENGTH_SHORT).show();
 
 
-                }
+                        }
 
-            }
-        },new OkHttpClientManager.Param[]{
-                new OkHttpClientManager.Param("phone number",loginPhoneEt.getText().toString()),
-                new OkHttpClientManager.Param("password",loginPswEt.getText().toString())}
-        );
+                        @Override
+                        public void onResponse(LoginBean response) {
+
+                            if (response.getResult().toString().equals(0)) {
+                                Toast.makeText(LoginActivty.this, response.getMsg().toString(), Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(LoginActivty.this, "登录成功", Toast.LENGTH_SHORT).show();
+                                SPUtils.put(LoginActivty.this, "userId", response.getData().getUid());
+                                SPUtils.put(LoginActivty.this, "token", response.getData().getToken());
+
+                                finish();
+
+
+                            }
+
+                        }
+                    }, new OkHttpClientManager.Param[]{
+                            new OkHttpClientManager.Param("phone number", loginPhoneEt.getText().toString()),
+                            new OkHttpClientManager.Param("password", loginPswEt.getText().toString())}
+            );
+        } else {
+            Toast.makeText(this, "您输入的电话号码不合法", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -128,42 +135,44 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
      * 這是寫了一個內部類
      * 反正這是 EditText 監聽
      */
-    class EditTextChange implements TextWatcher{
+    class EditTextChange implements TextWatcher {
 
         /**
-         * @param s  输入框中改变前的字符串信息
-         * @param start   输入框中改变前的字符串的起始位置
-         * @param count   输入框中改变前后的字符串改变数量 默认为0
-         * @param after   输入框中改变后的字符串与起始位置的偏移量
+         * @param s     输入框中改变前的字符串信息
+         * @param start 输入框中改变前的字符串的起始位置
+         * @param count 输入框中改变前后的字符串改变数量 默认为0
+         * @param after 输入框中改变后的字符串与起始位置的偏移量
          */
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
 
         /**
-         * @param s   输入框中改变后的字符串信息
-         * @param start   输入框中改变后的字符串的起始位置
-         * @param before  输入框中改变前的字符串的位置 默认为0
-         * @param count   输入框中改变后的一共输入字符串的数量
+         * @param s      输入框中改变后的字符串信息
+         * @param start  输入框中改变后的字符串的起始位置
+         * @param before 输入框中改变前的字符串的位置 默认为0
+         * @param count  输入框中改变后的一共输入字符串的数量
          */
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-            if (loginPhoneEt.getText().length() > 0 && loginPswEt.getText().length() > 0 ){
-                if (hasInput == false){
-                loginBtn.setBackgroundColor(Color.parseColor("#d85958"));loginBtn.setClickable(true);}
-                hasInput = true;}
-
-            else {
-                if (hasInput == true){
+            if (loginPhoneEt.getText().length() > 0 && loginPswEt.getText().length() > 0) {
+                if (hasInput == false) {
+                    loginBtn.setBackgroundColor(Color.parseColor("#d85958"));
+                    loginBtn.setClickable(true);
+                }
+                hasInput = true;
+            } else {
+                if (hasInput == true) {
                     loginBtn.setBackgroundColor(Color.parseColor("#f1f1f1"));
                     hasInput = false;
-                loginBtn.setClickable(false);}
+                    loginBtn.setClickable(false);
+                }
             }
         }
 
         /**
-         * @param s  输入框中改变后的一共输入字符串的数量
+         * @param s 输入框中改变后的一共输入字符串的数量
          */
         @Override
         public void afterTextChanged(Editable s) {
@@ -171,5 +180,19 @@ public class LoginActivty extends BaseActivity implements View.OnClickListener {
     }
 
 
+    /**
+     * 验证手机格式方法
+     */
+    public static boolean isMobileNO(String mobiles) {
+        /*
+        移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
+        联通：130、131、132、152、155、156、185、186
+        电信：133、153、180、189、（1349卫通）
+        总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
+        */
+        String telRegex = "[1][358]\\d{9}";//"[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
+        if (TextUtils.isEmpty(mobiles)) return false;
+        else return mobiles.matches(telRegex);
+    }
 
 }

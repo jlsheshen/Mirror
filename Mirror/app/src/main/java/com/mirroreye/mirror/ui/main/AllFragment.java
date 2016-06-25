@@ -141,13 +141,13 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
                         popupWindow.setBackgroundDrawable(new BitmapDrawable());
                         popupWindow.setTouchable(true);
                         Log.d("AllFragment", "position:" + position);
-                        if (position==5){
-                            position=0;
+                        if (position == 5) {
+                            position = 0;
                         }
-                        if (position==6){
+                        if (position == 6) {
                             //退出事件
-                            position=0;
-                            AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+                            position = 0;
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                             builder.setTitle("確定退出登錄");
                             builder.setPositiveButton("確定", new DialogInterface.OnClickListener() {
                                 @Override
@@ -158,14 +158,14 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
                                     if (weibo.isValid())
                                         weibo.removeAccount(true);
                                     Platform qq = ShareSDK.getPlatform(QQ.NAME);
-                                    if (qq.isValid()){
+                                    if (qq.isValid()) {
 
-                                            qq.removeAccount();
-                                        }
+                                        qq.removeAccount();
+                                    }
 
 
                                 }
-                            }).setNegativeButton("取消",null).show();
+                            }).setNegativeButton("取消", null).show();
                         }
 
                         ppwToFragment.getPosition(position);
