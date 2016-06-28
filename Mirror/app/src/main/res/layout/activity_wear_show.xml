@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/activity_wearshow"
+    android:layout_marginLeft="@dimen/normalMarginLeftAndRight"
+    android:layout_marginRight="@dimen/normalMarginLeftAndRight"
     >
 
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/loginTitleMarginTop"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/wearShowTitle"
-            android:layout_marginTop="@dimen/loginTitleMarginTop"
-            android:layout_marginLeft="@dimen/LoginTitlemarginLeft"
-            android:textSize="@dimen/LoginTitleTvSize"/>
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="fitXY"
-            android:layout_marginTop="@dimen/LoginLineMarginTop"
-            android:src="@mipmap/login_line"
-            android:layout_marginLeft="@dimen/LoginMarginLeft"
-            android:layout_marginRight="@dimen/LoginMarginLeft"/>
+        <include layout="@layout/include_personage_detail"
+            android:id="@+id/wear_show_title"/>
 
         <ListView
             android:id="@+id/wear_show_lv"
@@ -34,11 +23,12 @@
             android:dividerHeight="0px"
             android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"/>
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-    <RelativeLayout
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/wear_show_button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -59,8 +49,8 @@
             android:src="@mipmap/buy_button"
             android:layout_marginRight="@dimen/wearShowBackMargin"
             />
-    </RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
 
 
-</RelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -26,11 +26,11 @@ import com.squareup.okhttp.Request;
  * Created by ${jl} on 16/6/21.
  */
 public class AddressListActivity extends BaseActivity implements RvDeteleDataListener{
-    RecyclerView recyclerView;
-    AddressListAdapter adapter;
-    String token;
-    TextView addTv,titleTv,addAddressTv;
-    ImageView blackIv;
+    private RecyclerView recyclerView;
+    private AddressListAdapter adapter;
+    private String token;
+    private TextView addTv,titleTv,addAddressTv;
+    private ImageView blackIv;
 
     @Override
     public int setLayout() {
@@ -51,9 +51,6 @@ public class AddressListActivity extends BaseActivity implements RvDeteleDataLis
                 startActivity(intent);
             }
         });
-
-
-
     }
 
     @Override

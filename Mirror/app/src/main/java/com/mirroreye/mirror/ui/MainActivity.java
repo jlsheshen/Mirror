@@ -21,7 +21,6 @@ import android.widget.Toast;
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.adapter.PPWAdapter;
 import com.mirroreye.mirror.base.BaseActivity;
-import com.mirroreye.mirror.listener.L;
 
 import java.util.ArrayList;
 import java.util.List;

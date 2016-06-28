@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/rlRichpushTitleBar"
         android:layout_width="match_parent"
         android:layout_height="40.0dp"
@@ -40,7 +40,7 @@
             android:text=" "
             android:textSize="20sp"
             android:textColor="#ffffff" />
-    </RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
     <WebView
         android:layout_width="match_parent"

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape_main_background">
 
     <!--专题分享的fragment-->
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/share_fragment_classify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
-        <LinearLayout
+        <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -36,7 +36,7 @@
                 android:layout_marginTop="@dimen/mainClassifyTvMarginTop"
                 android:src="@mipmap/pull_arrows" />
 
-        </LinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
             android:text="@string/belowMainClassifyLineTv"
             android:textColor="@color/mainTextViewColor" />
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
 
     <android.support.v7.widget.RecyclerView
@@ -66,4 +66,4 @@
 
 
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

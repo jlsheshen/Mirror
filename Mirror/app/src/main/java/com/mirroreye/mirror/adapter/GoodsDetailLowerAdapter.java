@@ -1,7 +1,6 @@
 package com.mirroreye.mirror.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 import com.mirroreye.mirror.R;
-import com.mirroreye.mirror.base.BaseApplication;
 import com.mirroreye.mirror.base.view.NoTouchScrollView;
-import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
-import com.mirroreye.mirror.utils.ScreensUtil;
+import com.mirroreye.mirror.listener.OnSetBlowBarScrollListener;
 import com.mirroreye.mirror.utils.Share;
 
 /**
@@ -21,7 +18,7 @@ import com.mirroreye.mirror.utils.Share;
 public class GoodsDetailLowerAdapter extends BaseAdapter {
     Context context;
     NoTouchScrollView scrollView;
-    OnSetBlowBarScroll onSetBlowBarScroll;
+    OnSetBlowBarScrollListener onSetBlowBarScrollListener;
     ImageView shareIv;
 
     private boolean state = false;
@@ -34,8 +31,8 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
         this.state = state;
     }
 
-    public void setOnSetBlowBarScroll(OnSetBlowBarScroll onSetBlowBarScroll) {
-        this.onSetBlowBarScroll = onSetBlowBarScroll;
+    public void setOnSetBlowBarScrollListener(OnSetBlowBarScrollListener onSetBlowBarScrollListener) {
+        this.onSetBlowBarScrollListener = onSetBlowBarScrollListener;
     }
 
     public void setScrollView(NoTouchScrollView scrollView) {
@@ -82,7 +79,7 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
 
 
             if (state){
-                onSetBlowBarScroll.blowBarOut();
+                onSetBlowBarScrollListener.blowBarOut();
                 state = false;
 
             }
@@ -91,7 +88,7 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
 
 
             if (state){
-                onSetBlowBarScroll.blowBarOut();
+                onSetBlowBarScrollListener.blowBarOut();
                 state = false;
 
             }
@@ -105,7 +102,7 @@ public class GoodsDetailLowerAdapter extends BaseAdapter {
 
         }else {
             if (!state){
-                onSetBlowBarScroll.blowBarInto();
+                onSetBlowBarScrollListener.blowBarInto();
                 state = true;
             }
             convertView = LayoutInflater.from(context).inflate(R.layout.item_goods_detail_lower_lv,parent,false);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,10 +8,8 @@
     <ImageView
         android:id="@+id/item_wear_show_iv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:layout_marginLeft="@dimen/normalMarginLeftAndRight"
-        android:layout_marginRight="@dimen/normalMarginLeftAndRight"
         android:layout_marginTop="@dimen/wearLVHeadVvMarginTop"/>
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

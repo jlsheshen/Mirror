@@ -24,7 +24,6 @@ public class WelcomeActivity extends BaseActivity {
     @Override
     protected void initView() {
         imageView=bindView(R.id.welcome_image);
-
     }
 
     @Override

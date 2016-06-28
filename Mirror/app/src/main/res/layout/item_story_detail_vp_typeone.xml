@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_alignParentBottom="true">
 
-    <RelativeLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="@dimen/storyContentTextBackgroundWidth"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
@@ -48,5 +49,5 @@
             android:textSize="@dimen/specialThreeTextSize" />
 
 
-    </RelativeLayout>
-</RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

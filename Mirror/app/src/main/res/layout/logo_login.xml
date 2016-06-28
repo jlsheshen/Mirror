@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#00000000">
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -31,6 +31,6 @@
             android:layout_marginRight="@dimen/mainRvMarginLeft"
             />
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

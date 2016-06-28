@@ -25,7 +25,7 @@ public class AddAddressActivity extends BaseActivity implements View.OnClickList
     private Button submitAdd;
     private ImageView close;
     private TextView title;
-    String token;
+    private String token;
 
     @Override
     public int setLayout() {
@@ -40,7 +40,6 @@ public class AddAddressActivity extends BaseActivity implements View.OnClickList
         submitAdd = bindView(R.id.add_address_btn);
         close  =bindView(R.id.buy_detail_cancel_iv);
         title = bindView(R.id.personage_detail_title_tv);
-
     }
 
     @Override
@@ -65,7 +64,6 @@ public class AddAddressActivity extends BaseActivity implements View.OnClickList
             case R.id.buy_detail_cancel_iv:
                 finish();
                 break;
-
         }
     }
 

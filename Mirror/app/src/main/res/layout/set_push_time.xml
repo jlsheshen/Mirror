@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/tiledstripes" >
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:focusable="true"
@@ -236,6 +236,6 @@
                 android:layout_marginTop="20dip"
                 android:text="确定" />
         </LinearLayout>
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
 </ScrollView>

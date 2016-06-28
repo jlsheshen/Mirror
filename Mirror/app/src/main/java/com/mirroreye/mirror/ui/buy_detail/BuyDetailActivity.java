@@ -22,10 +22,10 @@ import com.squareup.okhttp.Request;
  * Created by ${jl} on 16/6/18.
  */
 public class BuyDetailActivity extends BaseActivity implements View.OnClickListener {
-    TextView consigneeTv,addressTv,phoneTv,commodityNmaeTv,commodityDescribeTv,changeAddressTv,ensureBuyTv;
-    ImageView commodityIv;
-    LinearLayout noDateLay,haveDateLay;
-    String token;
+    private TextView consigneeTv,addressTv,phoneTv,commodityNmaeTv,commodityDescribeTv,changeAddressTv,ensureBuyTv;
+    private ImageView commodityIv;
+    private LinearLayout noDateLay,haveDateLay;
+    private String token;
 
     @Override
     public int setLayout() {

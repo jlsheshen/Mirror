@@ -104,4 +104,5 @@
     <dimen name="specialPinkMarginBottom">70px</dimen>
     <dimen name="specialThreeMarginTop">20px</dimen>
     <dimen name="specialThreeTextSize">26px</dimen>
+    <dimen name="showClosePadding">15px</dimen>
 </resources>

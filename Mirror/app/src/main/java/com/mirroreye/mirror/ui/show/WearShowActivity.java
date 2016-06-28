@@ -1,5 +1,7 @@
 package com.mirroreye.mirror.ui.show;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -17,12 +19,14 @@ import android.widget.ListView;
 import android.widget.MediaController;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.adapter.WearShowLvAdapter;
 import com.mirroreye.mirror.base.BaseActivity;
+import com.mirroreye.mirror.utils.CommonVideoView;
 
 
 /**
@@ -30,25 +34,26 @@ import com.mirroreye.mirror.base.BaseActivity;
  * 佩戴图集
  */
 public class WearShowActivity extends BaseActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
+    private static RelativeLayout wearShowBtnLayout;
     private RelativeLayout wearShowAty;
-    private ListView wearShowLv;
+    public static ListView wearShowLv;
     private int[] images = {R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e};
     private WearShowLvAdapter wearShowLvAdapter;
 
     private ImageView lvHeadVvIv;
-    private VideoView lvHeadVv;
-    private ImageView lvHeadVvStartIv;
+    public CommonVideoView lvHeadVv;
+    public static ImageView lvHeadVvStartIv;
     private ImageView stopPlayIv;
 
     private PopupWindow wearImagePopupWindow;
-    private MediaController mediaController;
     private ImageView back;
     private ImageView buy;
-    private MyMediaController myMediaController ;
+    private TextView title;
 
-    private String videoUrl = "http://7rfkz6.com1.z0.glb.clouddn.com/360p_0043_XMTU3MjE1MDEwOA.mp4";
+    public static View head;
+    public static LinearLayout titleLayout;
 
-
+    private String videoUrl = "http://7xr7f7.com2.z0.glb.qiniucdn.com/Jimmy%20fairly%20-%20Spring%202014-HD.mp4";
 
     @Override
     public int setLayout() {
@@ -62,19 +67,22 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
 
         back = bindView(R.id.wear_show_back);
         buy = bindView(R.id.wear_show_buy);
-
+        title = bindView(R.id.personage_detail_title_tv);
+        titleLayout = bindView(R.id.wear_show_title);
+        wearShowBtnLayout = bindView(R.id.wear_show_button_layout);
     }
 
     @Override
     protected void initData() {
+        title.setText("商品细节展示");
         back.setOnClickListener(this);
         buy.setOnClickListener(this);
 
         wearShowLv.setOnItemClickListener(this);
 
-        View head = LayoutInflater.from(this).inflate(R.layout.lv_head_show, null);
+        head = LayoutInflater.from(this).inflate(R.layout.lv_head_show, null);
         lvHeadVvIv = (ImageView) head.findViewById(R.id.wear_show_head_iv);
-        lvHeadVv = (VideoView) head.findViewById(R.id.wear_show_head_vv);
+        lvHeadVv = (CommonVideoView) head.findViewById(R.id.common_videoView);
         lvHeadVvStartIv = (ImageView) head.findViewById(R.id.wear_head_vv_start_iv);
         stopPlayIv = (ImageView) head.findViewById(R.id.wear_show_stop_play_iv);
         wearShowLv.addHeaderView(head);
@@ -86,17 +94,6 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
         wearShowLvAdapter.setImage(images);
         wearShowLv.setAdapter(wearShowLvAdapter);
 
-
-        // 视频结束时的监听事件
-        lvHeadVv.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                lvHeadVvIv.setVisibility(View.VISIBLE);
-                lvHeadVvStartIv.setVisibility(View.VISIBLE);
-                lvHeadVv.setVisibility(View.GONE);
-                stopPlayIv.setVisibility(View.GONE);
-            }
-        });
     }
 
 
@@ -108,34 +105,25 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
                 break;
             case R.id.wear_show_buy:
 //                Toast.makeText(this, "不要點我", Toast.LENGTH_SHORT).show();
-
                 break;
             case R.id.wear_head_vv_start_iv:
                 stopPlayIv.setVisibility(View.VISIBLE);
                 lvHeadVvStartIv.setVisibility(View.GONE);
                 lvHeadVv.setVisibility(View.VISIBLE);
-                Uri uri = Uri.parse(videoUrl);
-                mediaController = new MediaController(this,false);
-                //VideoView与MediaController进行关联
-                lvHeadVv.setMediaController(mediaController);
-                lvHeadVv.setVideoURI(uri);
-                //开始播放视频
-                lvHeadVv.start();
+                lvHeadVv.start(videoUrl);
                 break;
             case R.id.wear_show_stop_play_iv:
                 lvHeadVv.setVisibility(View.GONE);
                 stopPlayIv.setVisibility(View.GONE);
                 lvHeadVvStartIv.setVisibility(View.VISIBLE);
-//                lvHeadVv.setMediaController(myMediaController);
-//                lvHeadVv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//                    @Override
-//                    public void onPrepared(MediaPlayer mp) {
-//                        lvHeadVv.start();
-//                    }
-//                });
-//                lvHeadVv.setFocusableInTouchMode(false);
+                int i = getResources().getConfiguration().orientation;
+                if (i == Configuration.ORIENTATION_PORTRAIT) {
+                    lvHeadVv.stopPlayback();
+                } else if (i == Configuration.ORIENTATION_LANDSCAPE) {
+                     this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);//竖屏
+                    lvHeadVv.stopPlayback();
+                }
                 break;
-
         }
     }
 
@@ -149,8 +137,6 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
             wearImagePopupWindow.showAtLocation(wearShowAty, Gravity.CENTER, 0, 0);
         }
     }
-
-
 
     private void showPopupWindow(int pos) {
         wearImagePopupWindow = new PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -170,8 +156,36 @@ public class WearShowActivity extends BaseActivity implements View.OnClickListen
                 wearImagePopupWindow.dismiss();
             }
         });
+    }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+            lvHeadVv.setFullScreen();
+        }else {
+            lvHeadVv.setNormalScreen();
+        }
+    }
 
+    public static ImageView getLvHeadVvStartIv(){
+        return lvHeadVvStartIv;
+    }
+
+    public static  LinearLayout getTitleLayout(){
+        return  titleLayout;
+    }
+
+    public static View getHead(){
+        return head;
+    }
+
+    public static ListView getListView(){
+        return wearShowLv;
+    }
+
+    public static RelativeLayout getWearShowBtnLayout(){
+        return wearShowBtnLayout;
     }
 
 }

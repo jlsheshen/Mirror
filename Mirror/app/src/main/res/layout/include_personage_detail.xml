@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/personage_detail_title_tv"
+            android:text="123"
             android:textSize="@dimen/bigest_text_size"
             />
 
@@ -27,7 +28,7 @@
 
             />
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
@@ -38,4 +39,4 @@
         />
 
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

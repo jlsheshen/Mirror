@@ -24,7 +24,7 @@ public class EditAddressActivity extends BaseActivity implements View.OnClickLis
     private Button submitEdit;
     private ImageView close;
     private TextView title;
-    String token;
+    private String token;
 
 
     @Override

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -7,15 +7,7 @@
 
    <include layout="@layout/include_personage_detail"/>
 
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/black_line"
-        android:scaleType="fitXY"
-        />
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/buy_detail_user_info_heigh"
         android:layout_marginTop="@dimen/bigest_text_size"
@@ -23,7 +15,7 @@
 
         android:orientation="vertical">
 
-        <LinearLayout
+        <com.zhy.autolayout.AutoLinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/buy_detail_user_address_heigh"
             android:orientation="vertical"
@@ -37,7 +29,7 @@
                 android:layout_margin="@dimen/LoginLineMarginTop"
                 android:text="填写收件人信息"
                 android:textSize="@dimen/itemHorizontalProductAreaSize" />
-        </LinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
 
        <include layout="@layout/include_consignee_info"
            />
@@ -58,9 +50,9 @@
 
 
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-    <RelativeLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/buy_detail_user_info_heigh"
         android:layout_marginTop="@dimen/LoginLineMarginTop"
@@ -107,7 +99,7 @@
             android:textColor="#ff55ab"
             android:textSize="@dimen/loginForgetPswTvSize"
             android:textStyle="bold" />
-    </RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
     <TextView
         android:id="@+id/buy_detail_commodity_surebuy_tv"
@@ -122,4 +114,4 @@
         />
 
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

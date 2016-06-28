@@ -8,7 +8,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -22,15 +21,13 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mirroreye.mirror.R;
 import com.mirroreye.mirror.adapter.HorizontalRecyclerViewAdapter;
 import com.mirroreye.mirror.adapter.PPWAdapter;
 import com.mirroreye.mirror.base.BaseFragment;
-import com.mirroreye.mirror.bean.PPWType;
 import com.mirroreye.mirror.interfaces.PPWToFragment;
-import com.mirroreye.mirror.ui.goods.GoodsDetails;
+import com.mirroreye.mirror.ui.goods.GoodsDetailsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,14 +36,11 @@ import cn.sharesdk.framework.Platform;
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.sina.weibo.SinaWeibo;
 import cn.sharesdk.tencent.qq.QQ;
-import de.greenrobot.event.EventBus;
-
 
 /**
  * Created by liangduo on 16/6/14.
  */
 public class AllFragment extends BaseFragment implements HorizontalRecyclerViewAdapter.MyOnItemClickListener {
-
 
     private TextView textView;
     private PopupWindow popupWindow;
@@ -65,7 +59,6 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
 
     int position;
     //接口 实现点击更换fragment
-
 
     private PPWToFragment ppwToFragment;
 
@@ -90,13 +83,10 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
 
         Bundle arg = getArguments();
         position = arg.getInt(TAG_POSITION);
-
     }
-
 
     @Override
     protected void initData() {
-
         //popupWindow
         //设置抽屉
         popupWindow = new PopupWindow(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -104,7 +94,6 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
         //初始化抽屉的组件
         ppwListView = (ListView) view.findViewById(R.id.ppw_list);
         popupWindow.setContentView(view);
-
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -129,7 +118,6 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
         recyclerView.setAdapter(horizontalRecyclerViewAdapter);
 
         horizontalRecyclerViewAdapter.setMyOnItemClickListener(this);
-
 
         //   if (popupWindow.isShowing()) {
 
@@ -159,11 +147,8 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
                                         weibo.removeAccount(true);
                                     Platform qq = ShareSDK.getPlatform(QQ.NAME);
                                     if (qq.isValid()){
-
                                             qq.removeAccount();
                                         }
-
-
                                 }
                             }).setNegativeButton("取消",null).show();
                         }
@@ -171,7 +156,6 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
                         ppwToFragment.getPosition(position);
                         ppwAdapter.setType(position);
                         popupWindow.dismiss();
-
                     }
                 }
         );
@@ -203,7 +187,7 @@ public class AllFragment extends BaseFragment implements HorizontalRecyclerViewA
 
     @Override
     public void onItemClick(int pos) {
-        Intent intent = new Intent(getContext(), GoodsDetails.class);
+        Intent intent = new Intent(getContext(), GoodsDetailsActivity.class);
         startActivity(intent);
     }
 

@@ -18,24 +18,22 @@ import com.mirroreye.mirror.base.view.NoTouchScrollView;
 import com.mirroreye.mirror.base.view.ScrollListenerListView;
 import com.mirroreye.mirror.listener.OnFrontScrollListener;
 import com.mirroreye.mirror.listener.OnListScrollListener;
-import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
+import com.mirroreye.mirror.listener.OnSetBlowBarScrollListener;
 import com.mirroreye.mirror.ui.buy_detail.BuyDetailActivity;
 import com.mirroreye.mirror.ui.show.WearShowActivity;
 
 /**
  * Created by liangduo on 16/6/15.
  */
-public class GoodsDetailsActivity extends BaseActivity implements OnFrontScrollListener,OnListScrollListener,OnSetBlowBarScroll{
-    ScrollListenerListView scrollListenerListView;
-    NoTouchScrollView noTouchScrollView;
-    MaxHighNoTouchListView maxHighNoTouchListView;
-    LinearLayout blowBar;
-    ObjectAnimator intoAnim;
-    ObjectAnimator outAnim;
-    CountDownTimer countDownTimer;
-    ImageView backIv,goShowIv,goBuyIv;
-
-
+public class GoodsDetailsActivity extends BaseActivity implements OnFrontScrollListener,OnListScrollListener,OnSetBlowBarScrollListener {
+    private ScrollListenerListView scrollListenerListView;
+    private NoTouchScrollView noTouchScrollView;
+    private MaxHighNoTouchListView maxHighNoTouchListView;
+    private LinearLayout blowBar;
+    private ObjectAnimator intoAnim;
+    private ObjectAnimator outAnim;
+    private CountDownTimer countDownTimer;
+    private ImageView backIv,goShowIv,goBuyIv;
 
     @Override
     public int setLayout() {
@@ -86,7 +84,7 @@ public class GoodsDetailsActivity extends BaseActivity implements OnFrontScrollL
         GoodsDetailFrontAdapter frontAdapter = new GoodsDetailFrontAdapter(this);
         GoodsDetailLowerAdapter lowerAdapter = new GoodsDetailLowerAdapter(this);
 
-        lowerAdapter.setOnSetBlowBarScroll(this);
+        lowerAdapter.setOnSetBlowBarScrollListener(this);
 
         maxHighNoTouchListView.setAdapter(frontAdapter);
         scrollListenerListView.setAdapter(lowerAdapter);

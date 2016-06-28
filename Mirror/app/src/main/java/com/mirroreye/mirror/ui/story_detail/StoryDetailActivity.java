@@ -13,9 +13,10 @@ import com.mirroreye.mirror.listener.OnViewPagerChangeListener;
  * Created by ${jl} on 16/6/15.
  */
 public class StoryDetailActivity extends BaseActivity implements OnViewPagerChangeListener {
-    ImageView backgroundIv,cancelIv,shareIv;
-    VerticalViewPager verticalViewPager;
-    StoryDetailAdapter storyDetailAdapter;
+    private ImageView backgroundIv,cancelIv,shareIv;
+    private VerticalViewPager verticalViewPager;
+    private StoryDetailAdapter storyDetailAdapter;
+
     @Override
     public int setLayout() {
         return R.layout.activity_story_detail;
@@ -28,21 +29,15 @@ public class StoryDetailActivity extends BaseActivity implements OnViewPagerChan
         shareIv = bindView(R.id.story_detail_share_iv);
         verticalViewPager = bindView(R.id.story_detail_content_vvp);
         storyDetailAdapter = new StoryDetailAdapter(this);
-
     }
 
     @Override
     protected void initData() {
         storyDetailAdapter.setOnViewPagerChangeListener(this);
         verticalViewPager.setAdapter(storyDetailAdapter);
-
-
     }
 
     @Override
     public void changedViewPager(int pos) {
-
-
-
     }
 }

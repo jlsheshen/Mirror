@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mirroreye.mirror.R;
-import com.mirroreye.mirror.base.value.V;
 import com.mirroreye.mirror.bean.PPWType;
 import com.mirroreye.mirror.interfaces.PPWToFragment;
 import com.mirroreye.mirror.utils.PopupType;

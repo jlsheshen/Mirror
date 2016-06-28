@@ -139,11 +139,6 @@ public static boolean isForeground = false;
                 Intent intent = new Intent(this, LoginActivty.class);
                 startActivity(intent);
                 break;
-            case R.id.log:
-                Intent intent1 = new Intent(this, WearShowActivity.class);
-                startActivity(intent1);
-                break;
-
         }
     }
 

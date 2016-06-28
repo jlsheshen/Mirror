@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="540px"
     android:layout_height="833px"
     android:layout_marginLeft="@dimen/mainRvMarginLeft"
@@ -12,7 +12,7 @@
         android:scaleType="fitXY"
         android:layout_height="833px" />
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="540px"
         android:layout_alignBottom="@id/item_horizontal_iv"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:background="@color/mainTextViewColor">
 
 
-        <RelativeLayout
+        <com.zhy.autolayout.AutoRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/MarginTopGoodsNameWhiteCancel"
@@ -48,7 +48,7 @@
                 android:layout_marginRight="@dimen/itemHorizontalTvMargin"
                 android:textColor="@color/itemRecyclerViewTvColor"/>
 
-        </RelativeLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
 
         <TextView
             android:id="@+id/item_horizontal_product_area"
@@ -80,7 +80,7 @@
 
 
 
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
 
 
@@ -91,4 +91,4 @@
 
 
 
-</RelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

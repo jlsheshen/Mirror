@@ -10,10 +10,10 @@
 
         >
 
-        <RelativeLayout
+        <com.zhy.autolayout.AutoRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <LinearLayout
+            <com.zhy.autolayout.AutoLinearLayout
                 android:layout_width="665px"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -21,7 +21,7 @@
 
 
                 >
-                <FrameLayout
+                <com.zhy.autolayout.AutoFrameLayout
                     android:layout_width="520px"
                     android:layout_height="wrap_content"
                     android:paddingBottom="@dimen/LoginLineMarginTop"
@@ -30,7 +30,7 @@
                     android:paddingRight="@dimen/LoginTvSize"
                     >
                 <include layout="@layout/include_consignee_info"
-                    /></FrameLayout>
+                    /></com.zhy.autolayout.AutoFrameLayout>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                     android:layout_marginTop="@dimen/storyTitleMargin"
                     android:layout_marginRight="@dimen/storyTitleMargin"
                     />
-            </LinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
 
             <TextView
                 android:layout_width="@dimen/good_detail_blow_height"
@@ -50,7 +50,7 @@
                 android:background="@color/colorAccent"
                 />
 
-        </RelativeLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
 
     </com.mirroreye.mirror.base.view.SlidingItemView>
 
