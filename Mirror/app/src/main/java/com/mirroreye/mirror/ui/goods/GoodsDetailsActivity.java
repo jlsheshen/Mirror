@@ -1,13 +1,10 @@
 package com.mirroreye.mirror.ui.goods;
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
-import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -22,14 +19,13 @@ import com.mirroreye.mirror.base.view.ScrollListenerListView;
 import com.mirroreye.mirror.listener.OnFrontScrollListener;
 import com.mirroreye.mirror.listener.OnListScrollListener;
 import com.mirroreye.mirror.listener.OnSetBlowBarScroll;
-import com.mirroreye.mirror.ui.buy_detail.BuyDetail;
+import com.mirroreye.mirror.ui.buy_detail.BuyDetailActivity;
 import com.mirroreye.mirror.ui.show.WearShowActivity;
-import com.mirroreye.mirror.utils.Share;
 
 /**
  * Created by liangduo on 16/6/15.
  */
-public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,OnListScrollListener,OnSetBlowBarScroll{
+public class GoodsDetailsActivity extends BaseActivity implements OnFrontScrollListener,OnListScrollListener,OnSetBlowBarScroll{
     ScrollListenerListView scrollListenerListView;
     NoTouchScrollView noTouchScrollView;
     MaxHighNoTouchListView maxHighNoTouchListView;
@@ -66,7 +62,7 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         goShowIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoodsDetails.this,WearShowActivity.class);
+                Intent intent = new Intent(GoodsDetailsActivity.this,WearShowActivity.class);
                 startActivity(intent);
 
             }
@@ -74,7 +70,7 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
         goBuyIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(GoodsDetails.this,BuyDetail.class);
+                Intent intent = new Intent(GoodsDetailsActivity.this,BuyDetailActivity.class);
                 startActivity(intent);
 
             }
@@ -141,7 +137,6 @@ public class GoodsDetails extends BaseActivity implements OnFrontScrollListener,
 
     @Override
     public void blowBarInto() {
-        Log.d("GoodsDetails", "插入动画");
         blowBar.setVisibility(View.VISIBLE);
         intoAnim.start();
 
